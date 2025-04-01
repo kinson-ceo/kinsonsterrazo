@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1920" height="1080" viewBox="0 0 1920 1080" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Dark background -->
+  <rect width="1920" height="1080" fill="#111111"/>
+  
+  <!-- Terrazzo pattern - random shapes in gold tones -->
+  <!-- Large shapes -->
+  <circle cx="200" cy="300" r="60" fill="#D4AF37" opacity="0.1"/>
+  <circle cx="1200" cy="800" r="75" fill="#D4AF37" opacity="0.08"/>
+  <circle cx="1700" cy="280" r="50" fill="#C5B358" opacity="0.12"/>
+  <circle cx="900" cy="600" r="90" fill="#D4AF37" opacity="0.06"/>
+  <circle cx="500" cy="950" r="40" fill="#D4AF37" opacity="0.1"/>
+  
+  <!-- Medium shapes -->
+  <rect x="400" y="200" width="30" height="30" fill="#C5B358" opacity="0.15"/>
+  <rect x="1000" y="300" width="25" height="25" fill="#D4AF37" opacity="0.2"/>
+  <rect x="1400" y="700" width="20" height="20" fill="#C5B358" opacity="0.1"/>
+  <rect x="300" y="800" width="35" height="35" fill="#D4AF37" opacity="0.08"/>
+  <rect x="1600" y="400" width="40" height="40" fill="#C5B358" opacity="0.12"/>
+  
+  <!-- Small shapes -->
+  <circle cx="600" cy="150" r="8" fill="#D4AF37" opacity="0.25"/>
+  <circle cx="750" cy="350" r="6" fill="#C5B358" opacity="0.3"/>
+  <circle cx="1100" cy="450" r="5" fill="#D4AF37" opacity="0.2"/>
+  <circle cx="1300" cy="200" r="7" fill="#C5B358" opacity="0.25"/>
+  <circle cx="1500" cy="500" r="4" fill="#D4AF37" opacity="0.3"/>
+  <circle cx="800" cy="850" r="9" fill="#C5B358" opacity="0.15"/>
+  <circle cx="1900" cy="600" r="7" fill="#D4AF37" opacity="0.2"/>
+  <circle cx="100" cy="700" r="5" fill="#C5B358" opacity="0.25"/>
+  <circle cx="450" cy="550" r="6" fill="#D4AF37" opacity="0.15"/>
+  <circle cx="1750" cy="850" r="8" fill="#C5B358" opacity="0.2"/>
+  
+  <!-- Triangular shapes -->
+  <path d="M850 200 L880 250 L820 250 Z" fill="#D4AF37" opacity="0.1"/>
+  <path d="M1200 500 L1240 570 L1160 570 Z" fill="#C5B358" opacity="0.08"/>
+  <path d="M500 400 L540 460 L460 460 Z" fill="#D4AF37" opacity="0.12"/>
+  <path d="M1600 650 L1630 700 L1570 700 Z" fill="#C5B358" opacity="0.1"/>
+  <path d="M350 650 L380 700 L320 700 Z" fill="#D4AF37" opacity="0.15"/>
+  
+  <!-- Subtle overlay gradient -->
+  <rect width="1920" height="1080" fill="url(#gradient)" opacity="0.4"/>
+  <defs>
+    <linearGradient id="gradient" x1="0" y1="0" x2="1920" y2="1080" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#D4AF37" stop-opacity="0.05"/>
+      <stop offset="1" stop-color="#111111" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+</svg> 

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="300" height="300" viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background rectangle -->
+  <rect width="300" height="300" fill="#F5F5F5"/>
+  
+  <!-- Person silhouette background -->
+  <circle cx="150" cy="120" r="70" fill="#DDDDDD"/>
+  <path d="M70 300C70 245 115 225 150 225C185 225 230 245 230 300" fill="#DDDDDD"/>
+  
+  <!-- Minimalist person silhouette -->
+  <circle cx="150" cy="120" r="50" fill="#555555"/>
+  <path d="M100 220C100 180 125 165 150 165C175 165 200 180 200 220V300H100V220Z" fill="#555555"/>
+  
+  <!-- Gold accent details -->
+  <circle cx="150" cy="120" r="48" stroke="#D4AF37" stroke-width="2" stroke-dasharray="4 4"/>
+  <rect x="100" y="225" width="100" height="2" fill="#D4AF37"/>
+  
+  <!-- Placeholder text for name -->
+  <rect x="90" y="260" width="120" height="10" rx="5" fill="#AAAAAA"/>
+  <rect x="110" y="280" width="80" height="8" rx="4" fill="#AAAAAA"/>
+</svg> 

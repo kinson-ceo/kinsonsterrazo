@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="300" height="200" viewBox="0 0 300 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="300" height="200" rx="8" fill="#F8F9FA"/>
+  
+  <!-- Quote icon -->
+  <path d="M40 60C40 48.9543 48.9543 40 60 40H80C91.0457 40 100 48.9543 100 60V80C100 91.0457 91.0457 100 80 100H70L60 120V100H60C48.9543 100 40 91.0457 40 80V60Z" fill="#D4AF37" opacity="0.2"/>
+  <path d="M40 60C40 48.9543 48.9543 40 60 40H80C91.0457 40 100 48.9543 100 60V80C100 91.0457 91.0457 100 80 100H70L60 120V100H60C48.9543 100 40 91.0457 40 80V60Z" stroke="#D4AF37" stroke-width="2"/>
+  
+  <!-- Quote marks -->
+  <path d="M55 60H65L60 80H50L55 60Z" fill="#D4AF37"/>
+  <path d="M75 60H85L80 80H70L75 60Z" fill="#D4AF37"/>
+  
+  <!-- Text lines -->
+  <rect x="120" y="50" width="150" height="6" rx="3" fill="#CCCCCC"/>
+  <rect x="120" y="65" width="140" height="6" rx="3" fill="#CCCCCC"/>
+  <rect x="120" y="80" width="160" height="6" rx="3" fill="#CCCCCC"/>
+  <rect x="120" y="95" width="130" height="6" rx="3" fill="#CCCCCC"/>
+  
+  <!-- Author details -->
+  <circle cx="130" cy="150" r="15" fill="#DDDDDD"/>
+  <rect x="155" y="143" width="80" height="6" rx="3" fill="#AAAAAA"/>
+  <rect x="155" y="157" width="50" height="6" rx="3" fill="#CCCCCC"/>
+</svg> 
