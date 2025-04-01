@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 // import Hero from "./components/Hero";
 import ServicesSection from "./components/ServicesSection";
-import BenefitsSection from "./components/BenefitsSection";
+// import BenefitsSection from "./components/BenefitsSection";
 import ProjectsSection from "./components/ProjectsSection";
 import TestimonialsSection from "./components/TestimonialsSection";
 import FaqSection from "./components/FaqSection";
@@ -18,14 +18,14 @@ export default function App() {
         <Navbar />
         <main className="flex-grow">
           <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/contact" element={<ContactSection />} />
-            <Route path="/services" element={<ServicesSection />} />
-            <Route path="/projects" element={<ProjectsSection />} />
-            <Route path="/testimonials" element={<TestimonialsSection />} />
-            <Route path="/faq" element={<FaqSection />} />
-            <Route path="/benefits" element={<BenefitsSection />} />
+            <Route path="/kinsonsterrazo" element={<Home />} />
+            <Route path="/kinsonsterrazo/about" element={<About />} />
+            <Route path="/kinsonsterrazo/contact" element={<ContactSection />} />
+            <Route path="/kinsonsterrazo/services" element={<ServicesSection />} />
+            <Route path="/kinsonsterrazo/projects" element={<ProjectsSection />} />
+            <Route path="/kinsonsterrazo/testimonials" element={<TestimonialsSection />} />
+            <Route path="/kinsonsterrazo/faq" element={<FaqSection />} />
+            {/* <Route path="/kinsonsterrazo/benefits" element={<BenefitsSection />} /> */}
             {/* Add more routes as you develop more pages */}
           </Routes>
         </main>
