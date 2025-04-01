@@ -9,7 +9,7 @@ const Footer = () => {
           <div className="mb-6 md:mb-0">
             <div className="flex items-center">
               <img
-                src="/images/logo.svg"
+                src="/kinsonsterrazo/images/logo.svg"
                 className="mr-3 h-12 w-12"
                 alt="Kinsons Terrazzo Logo"
               />
@@ -35,17 +35,17 @@ const Footer = () => {
               </h2>
               <ul className="text-gray-600 dark:text-gray-400">
                 <li className="mb-4">
-                  <Link to="/about" className="hover:underline">
+                  <Link to="/kinsonsterrazo/about" className="hover:underline">
                     Company
                   </Link>
                 </li>
                 <li className="mb-4">
-                  <Link to="/projects" className="hover:underline">
+                  <Link to="/kinsonsterrazo/projects" className="hover:underline">
                     Portfolio
                   </Link>
                 </li>
                 <li className="mb-4">
-                  <Link to="/testimonials" className="hover:underline">
+                  <Link to="/kinsonsterrazo/testimonials" className="hover:underline">
                     Testimonials
                   </Link>
                 </li>
@@ -57,17 +57,17 @@ const Footer = () => {
               </h2>
               <ul className="text-gray-600 dark:text-gray-400">
                 <li className="mb-4">
-                  <Link to="/services/flooring" className="hover:underline">
+                  <Link to="/kinsonsterrazo/services/flooring" className="hover:underline">
                     Flooring
                   </Link>
                 </li>
                 <li className="mb-4">
-                  <Link to="/services/countertops" className="hover:underline">
+                  <Link to="/kinsonsterrazo/services/countertops" className="hover:underline">
                     Countertops
                   </Link>
                 </li>
                 <li className="mb-4">
-                  <Link to="/services/custom" className="hover:underline">
+                  <Link to="/kinsonsterrazo/services/custom" className="hover:underline">
                     Custom Design
                   </Link>
                 </li>
@@ -79,7 +79,7 @@ const Footer = () => {
               </h2>
               <ul className="text-gray-600 dark:text-gray-400">
                 <li className="mb-4">
-                  <Link to="/contact" className="hover:underline">
+                  <Link to="/kinsonsterrazo/contact" className="hover:underline">
                     Get a Quote
                   </Link>
                 </li>

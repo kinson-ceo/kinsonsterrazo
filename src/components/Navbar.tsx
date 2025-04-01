@@ -4,6 +4,7 @@ import { DarkThemeToggle } from "flowbite-react";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
 
   useEffect(() => {
@@ -28,6 +29,11 @@ const Navbar = () => {
     return path !== "/" && location.pathname.startsWith(path);
   };
 
+  // Close mobile menu when route changes
+  useEffect(() => {
+    setIsMenuOpen(false);
+  }, [location]);
+
   return (
     <nav
       className={`fixed z-50 w-full transition-all duration-300 ${
@@ -37,9 +43,9 @@ const Navbar = () => {
       }`}
     >
       <div className="mx-auto flex max-w-screen-xl flex-wrap items-center justify-between p-4">
-        <Link to="/" className="flex items-center">
+        <Link to="/kinsonsterrazo" className="flex items-center">
           <img
-            src="/images/logo.svg"
+            src="/kinsonsterrazo/images/logo.svg"
             className="mr-3 h-12 w-12"
             alt="Kinsons Terrazzo Logo"
           />
@@ -59,7 +65,8 @@ const Navbar = () => {
             type="button"
             className="inline-flex h-10 w-10 items-center justify-center rounded-lg p-2 text-sm text-gray-500 hover:bg-gray-100 focus:ring-2 focus:ring-gray-200 focus:outline-none md:hidden dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
             aria-controls="navbar-sticky"
-            aria-expanded="false"
+            aria-expanded={isMenuOpen}
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             <span className="sr-only">Open main menu</span>
             <svg
@@ -81,91 +88,100 @@ const Navbar = () => {
         </div>
 
         <div
-          className="hidden w-full items-center justify-between md:order-1 md:flex md:w-auto"
+          className={`${
+            isMenuOpen ? "block" : "hidden"
+          } w-full items-center justify-between md:order-1 md:flex md:w-auto`}
           id="navbar-sticky"
         >
           <ul className="mt-4 flex flex-col rounded-lg border border-gray-100 bg-gray-50 p-4 font-medium md:mt-0 md:flex-row md:space-x-8 md:border-0 md:bg-transparent md:p-0 dark:border-gray-700 dark:bg-gray-800 md:dark:bg-transparent">
             <li>
               <Link
-                to="/"
+                to="/kinsonsterrazo"
                 className={`block rounded py-2 pr-4 pl-3 md:bg-transparent md:p-0 ${
-                  isActive("/")
+                  isActive("/kinsonsterrazo")
                     ? "text-primary-600 md:text-primary-600 dark:text-primary-500 md:dark:text-primary-500"
                     : "md:hover:text-primary-600 md:dark:hover:text-primary-500 text-gray-900 hover:bg-gray-100 md:hover:bg-transparent dark:text-white dark:hover:bg-gray-700 md:dark:hover:bg-transparent"
                 }`}
-                aria-current={isActive("/") ? "page" : undefined}
+                aria-current={isActive("/kinsonsterrazo") ? "page" : undefined}
+                onClick={() => setIsMenuOpen(false)}
               >
                 Home
               </Link>
             </li>
             <li>
               <Link
-                to="/about"
+                to="/kinsonsterrazo/about"
                 className={`block rounded py-2 pr-4 pl-3 md:p-0 ${
-                  isActive("/about")
+                  isActive("/kinsonsterrazo/about")
                     ? "text-primary-600 md:text-primary-600 dark:text-primary-500 md:dark:text-primary-500"
                     : "md:hover:text-primary-600 md:dark:hover:text-primary-500 text-gray-900 hover:bg-gray-100 md:hover:bg-transparent dark:text-white dark:hover:bg-gray-700 md:dark:hover:bg-transparent"
                 }`}
+                onClick={() => setIsMenuOpen(false)}
               >
                 About Us
               </Link>
             </li>
             <li>
               <Link
-                to="/services"
+                to="/kinsonsterrazo/services"
                 className={`block rounded py-2 pr-4 pl-3 md:p-0 ${
-                  isActive("/services")
+                  isActive("/kinsonsterrazo/services")
                     ? "text-primary-600 md:text-primary-600 dark:text-primary-500 md:dark:text-primary-500"
                     : "md:hover:text-primary-600 md:dark:hover:text-primary-500 text-gray-900 hover:bg-gray-100 md:hover:bg-transparent dark:text-white dark:hover:bg-gray-700 md:dark:hover:bg-transparent"
                 }`}
+                onClick={() => setIsMenuOpen(false)}
               >
                 Services
               </Link>
             </li>
             <li>
               <Link
-                to="/projects"
+                to="/kinsonsterrazo/projects"
                 className={`block rounded py-2 pr-4 pl-3 md:p-0 ${
-                  isActive("/projects")
+                  isActive("/kinsonsterrazo/projects")
                     ? "text-primary-600 md:text-primary-600 dark:text-primary-500 md:dark:text-primary-500"
                     : "md:hover:text-primary-600 md:dark:hover:text-primary-500 text-gray-900 hover:bg-gray-100 md:hover:bg-transparent dark:text-white dark:hover:bg-gray-700 md:dark:hover:bg-transparent"
                 }`}
+                onClick={() => setIsMenuOpen(false)}
               >
                 Projects
               </Link>
             </li>
             <li>
               <Link
-                to="/testimonials"
+                to="/kinsonsterrazo/testimonials"
                 className={`block rounded py-2 pr-4 pl-3 md:p-0 ${
-                  isActive("/testimonials")
+                  isActive("/kinsonsterrazo/testimonials")
                     ? "text-primary-600 md:text-primary-600 dark:text-primary-500 md:dark:text-primary-500"
                     : "md:hover:text-primary-600 md:dark:hover:text-primary-500 text-gray-900 hover:bg-gray-100 md:hover:bg-transparent dark:text-white dark:hover:bg-gray-700 md:dark:hover:bg-transparent"
                 }`}
+                onClick={() => setIsMenuOpen(false)}
               >
                 Testimonials
               </Link>
             </li>
-            <li>
+            {/* <li>
               <Link
-                to="/blog"
+                to="/kinsonsterrazo/blog"
                 className={`block rounded py-2 pr-4 pl-3 md:p-0 ${
-                  isActive("/blog")
+                  isActive("/kinsonsterrazo/blog")
                     ? "text-primary-600 md:text-primary-600 dark:text-primary-500 md:dark:text-primary-500"
                     : "md:hover:text-primary-600 md:dark:hover:text-primary-500 text-gray-900 hover:bg-gray-100 md:hover:bg-transparent dark:text-white dark:hover:bg-gray-700 md:dark:hover:bg-transparent"
                 }`}
+                onClick={() => setIsMenuOpen(false)}
               >
                 Blog
               </Link>
-            </li>
+            </li> */}
             <li>
               <Link
-                to="/contact"
+                to="/kinsonsterrazo/contact"
                 className={`block rounded py-2 pr-4 pl-3 md:p-0 ${
-                  isActive("/contact")
+                  isActive("/kinsonsterrazo/contact")
                     ? "text-primary-600 md:text-primary-600 dark:text-primary-500 md:dark:text-primary-500"
                     : "md:hover:text-primary-600 md:dark:hover:text-primary-500 text-gray-900 hover:bg-gray-100 md:hover:bg-transparent dark:text-white dark:hover:bg-gray-700 md:dark:hover:bg-transparent"
                 }`}
+                onClick={() => setIsMenuOpen(false)}
               >
                 Contact
               </Link>

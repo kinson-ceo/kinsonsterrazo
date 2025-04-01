@@ -1,4 +1,5 @@
 import { Button } from "flowbite-react";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
@@ -7,9 +8,9 @@ const Hero = () => {
       <div className="absolute inset-0 z-0 overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center"
-          style={{
-            backgroundImage: "url('/images/hero/hero-bg.svg')",
-          }}
+          //   style={{
+          //     backgroundImage: "url('/kinsonsterrazo/images/hero/hero-bg.svg')",
+          //   }}
         />
       </div>
 
@@ -17,24 +18,36 @@ const Hero = () => {
         <div className="flex w-full max-w-7xl flex-col items-center gap-12 md:flex-row md:justify-between">
           <div className="flex max-w-2xl flex-col items-start gap-6">
             <h1 className="text-5xl font-bold tracking-tight text-white sm:text-6xl">
-              <span className="block">Timeless Terrazzo for</span>
+              <span className="from-primary-500 to-primary-300 block bg-gradient-to-r bg-clip-text text-transparent">
+                Timeless Terrazzo for
+              </span>
               <span className="from-primary-500 to-primary-300 block bg-gradient-to-r bg-clip-text text-transparent">
                 Modern Spaces
               </span>
             </h1>
-            <p className="text-xl leading-8 text-gray-300">
+            {/* <span className="block bg-gradient-to-r from-amber-500 to-yellow-300 bg-clip-text text-transparent">
+                Timeless Terrazzo for
+              </span>
+              <span className="block bg-gradient-to-r from-amber-500 to-yellow-300 bg-clip-text text-transparent">
+                Modern Spaces
+              </span> */}
+            <p className="text-xl leading-8 text-gray-400">
               Innovative terrazzo designs crafted with precision and artistry.
               Elevate your space with our premium flooring, countertops, and
               custom terrazzo solutions.
             </p>
             <div className="flex flex-wrap gap-4">
               <Button
+                as={Link}
+                to="/kinsonsterrazo/contact"
                 size="lg"
                 className="bg-primary-600 hover:bg-primary-700 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
               >
                 Get a Free Quote
               </Button>
               <Button
+                as={Link}
+                to="/kinsonsterrazo/projects"
                 size="lg"
                 color="light"
                 className="border-gray-200 hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700"
@@ -46,7 +59,7 @@ const Hero = () => {
           <div className="hidden md:block">
             <div className="relative h-[450px] w-[450px] overflow-hidden rounded-full border-8 border-gray-800 shadow-xl">
               <img
-                src="/images/logo.svg"
+                src="/kinsonsterrazo/images/logo.svg"
                 alt="Kinsons Terrazzo Logo"
                 className="h-full w-full object-contain p-8"
               />

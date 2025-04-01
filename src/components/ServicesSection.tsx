@@ -1,4 +1,4 @@
-import { Button, Card } from "flowbite-react";
+import { Card } from "flowbite-react";
 
 // Define the service data
 const services = [
@@ -7,7 +7,7 @@ const services = [
     title: "Terrazzo Flooring",
     description:
       "Durable and elegant terrazzo flooring solutions for residential and commercial spaces. Our flooring combines beauty with longevity.",
-    image: "/images/services/flooring.svg",
+    image: "/kinsonsterrazo/images/services/flooring.svg",
     icon: (
       <svg
         className="text-primary-600 h-8 w-8"
@@ -31,7 +31,7 @@ const services = [
     title: "Terrazzo Countertops",
     description:
       "Premium terrazzo countertops that add sophistication to kitchens and bathrooms. Customized to match your interior design vision.",
-    image: "/images/services/countertops.svg",
+    image: "/kinsonsterrazo/images/services/countertops.svg",
     icon: (
       <svg
         className="text-primary-600 h-8 w-8"
@@ -55,7 +55,7 @@ const services = [
     title: "Custom Terrazzo Designs",
     description:
       "Bespoke terrazzo solutions tailored to your specific design needs. From artistic installations to unique patterns and colors.",
-    image: "/images/services/custom.svg",
+    image: "/kinsonsterrazo/images/services/custom.svg",
     icon: (
       <svg
         className="text-primary-600 h-8 w-8"
@@ -79,7 +79,7 @@ const services = [
     title: "Terrazzo Stairs & Walls",
     description:
       "Extend the beauty of terrazzo to stairs, walls and vertical surfaces. Create cohesive designs throughout your space.",
-    image: "/images/services/custom.svg", // Reusing custom.svg for now
+    image: "/kinsonsterrazo/images/services/custom.svg", // Reusing custom.svg for now
     icon: (
       <svg
         className="text-primary-600 h-8 w-8"
@@ -137,7 +137,7 @@ const ServicesSection = () => {
                 <p className="mb-4 text-gray-600 dark:text-gray-300">
                   {service.description}
                 </p>
-                <Button
+                {/* <Button
                   as="a"
                   href={service.link}
                   className="group text-primary-600 hover:text-primary-700 dark:text-primary-400 dark:hover:text-primary-300 mt-auto inline-flex items-center"
@@ -159,7 +159,7 @@ const ServicesSection = () => {
                       d="M17 8l4 4m0 0l-4 4m4-4H3"
                     />
                   </svg>
-                </Button>
+                </Button> */}
               </div>
             </Card>
           ))}

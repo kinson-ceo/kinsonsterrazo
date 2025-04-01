@@ -8,7 +8,7 @@ const projects = [
     title: "Modern Office Flooring",
     description:
       "Custom terrazzo flooring for a corporate headquarters in downtown.",
-    image: "/images/projects/project1.svg",
+    image: "/kinsonsterrazo/images/projects/project1.svg",
     category: "commercial",
     client: "TechCorp Inc.",
     location: "New York, NY",
@@ -18,7 +18,7 @@ const projects = [
     title: "Luxury Residential Kitchen",
     description:
       "Elegant terrazzo countertops with custom color blend for a high-end residence.",
-    image: "/images/projects/project2.svg",
+    image: "/kinsonsterrazo/images/projects/project2.svg",
     category: "residential",
     client: "Private Residence",
     location: "Miami, FL",
@@ -28,7 +28,7 @@ const projects = [
     title: "Hotel Lobby Renovation",
     description:
       "Complete terrazzo restoration and new installation for a historic hotel.",
-    image: "/images/projects/project1.svg",
+    image: "/kinsonsterrazo/images/projects/project1.svg",
     category: "commercial",
     client: "Grand Plaza Hotel",
     location: "Chicago, IL",
@@ -38,7 +38,7 @@ const projects = [
     title: "Custom Terrazzo Wall Art",
     description:
       "Artistic terrazzo wall installation featuring custom patterns and vibrant colors.",
-    image: "/images/projects/project2.svg",
+    image: "/kinsonsterrazo/images/projects/project2.svg",
     category: "custom",
     client: "Metropolitan Museum",
     location: "San Francisco, CA",
@@ -48,7 +48,7 @@ const projects = [
     title: "Restaurant Flooring",
     description:
       "Durable and stylish terrazzo flooring for a busy upscale restaurant.",
-    image: "/images/projects/project1.svg",
+    image: "/kinsonsterrazo/images/projects/project1.svg",
     category: "commercial",
     client: "Fusion Bistro",
     location: "Los Angeles, CA",
@@ -58,7 +58,7 @@ const projects = [
     title: "Modern Bathroom Renovation",
     description:
       "Complete bathroom transformation with terrazzo walls, floors, and countertops.",
-    image: "/images/projects/project2.svg",
+    image: "/kinsonsterrazo/images/projects/project2.svg",
     category: "residential",
     client: "Private Residence",
     location: "Boston, MA",
@@ -140,19 +140,19 @@ const ProjectsSection = () => {
                     <span>{project.location}</span>
                   </div>
                 </div>
-                <Button
+                {/* <Button
                   color="light"
                   className="group-hover:bg-primary-50 mt-6 w-full dark:group-hover:bg-gray-600"
                 >
                   View Project Details
-                </Button>
+                </Button> */}
               </div>
             </div>
           ))}
         </div>
 
         <div className="mt-16 text-center">
-          <Button size="lg" color="primary" href="/projects" as="a">
+          <Button size="lg" color="primary" href="/kinsonsterrazo/projects" as="a">
             View All Projects
           </Button>
         </div>

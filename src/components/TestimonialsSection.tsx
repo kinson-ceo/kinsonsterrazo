@@ -10,7 +10,7 @@ const testimonials = [
     company: "Modern Spaces Design",
     quote:
       "Working with Kinsons Terrazzo has been an absolute pleasure. Their attention to detail and commitment to quality is evident in every project. The terrazzo countertops they installed in our client's home exceeded all expectations.",
-    image: "/images/testimonials/testimonial1.svg",
+    image: "/kinsonsterrazo/images/testimonials/testimonial1.svg",
     rating: 5,
   },
   {
@@ -20,7 +20,7 @@ const testimonials = [
     company: "Chen Construction Group",
     quote:
       "We've partnered with Kinsons Terrazzo on multiple commercial projects, and they consistently deliver outstanding results. Their team's expertise and professionalism have made them our go-to terrazzo specialists.",
-    image: "/images/testimonials/testimonial1.svg", // Reusing testimonial1.svg
+    image: "/kinsonsterrazo/images/testimonials/testimonial1.svg", // Reusing testimonial1.svg
     rating: 5,
   },
   {
@@ -30,7 +30,7 @@ const testimonials = [
     company: "",
     quote:
       "I couldn't be happier with my kitchen renovation. The terrazzo countertops are not only beautiful but incredibly durable. The installation team was professional, clean, and finished the job ahead of schedule.",
-    image: "/images/testimonials/testimonial1.svg", // Reusing testimonial1.svg
+    image: "/kinsonsterrazo/images/testimonials/testimonial1.svg", // Reusing testimonial1.svg
     rating: 5,
   },
   {
@@ -40,7 +40,7 @@ const testimonials = [
     company: "Wilson & Associates",
     quote:
       "Kinsons Terrazzo brings an exceptional level of craftsmanship to every project. Their ability to execute complex designs while maintaining the highest quality standards sets them apart in the industry.",
-    image: "/images/testimonials/testimonial1.svg", // Reusing testimonial1.svg
+    image: "/kinsonsterrazo/images/testimonials/testimonial1.svg", // Reusing testimonial1.svg
     rating: 5,
   },
   {
@@ -50,7 +50,7 @@ const testimonials = [
     company: "Coastal Bistro",
     quote:
       "Our restaurant floors needed to be both beautiful and extremely durable. Kinsons delivered on both fronts with their terrazzo flooring. Three years later, it still looks brand new despite heavy foot traffic.",
-    image: "/images/testimonials/testimonial1.svg", // Reusing testimonial1.svg
+    image: "/kinsonsterrazo/images/testimonials/testimonial1.svg", // Reusing testimonial1.svg
     rating: 4,
   },
 ];
@@ -229,7 +229,7 @@ const TestimonialsSection = () => {
 
         <div className="mt-12 text-center">
           <a
-            href="/testimonials"
+            href="/kinsonsterrazo/testimonials"
             className="text-primary-600 hover:text-primary-700 dark:text-primary-400 dark:hover:text-primary-300 inline-flex items-center font-medium"
           >
             <span>Read more testimonials</span>

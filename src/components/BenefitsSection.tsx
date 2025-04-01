@@ -140,7 +140,7 @@ const BenefitsSection = () => {
             <div className="flex-1">
               <div className="flex justify-center">
                 <img
-                  src="/images/terrazzo-craft.jpg"
+                  src="/kinsonsterrazo/images/terrazzo-craft.svg"
                   alt="Terrazzo Craftsmanship"
                   className="h-64 w-auto rounded-lg object-cover shadow-lg"
                 />

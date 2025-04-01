@@ -54,7 +54,7 @@ const About = () => {
           <div className="space-y-8">
             <div className="overflow-hidden rounded-lg shadow-lg">
               <img
-                src="/images/about/company-history.svg"
+                src="/kinsonsterrazo/images/about/company-history.svg"
                 alt="Kinsons Terrazzo History Timeline"
                 className="h-full w-full object-contain"
               />
@@ -171,7 +171,7 @@ const About = () => {
             <div className="text-center">
               <div className="mb-4 overflow-hidden rounded-full">
                 <img
-                  src="/images/team/team-member1.svg"
+                  src="/kinsonsterrazo/images/team/team-member1.svg"
                   alt="Michael Kinsons"
                   className="mx-auto h-64 w-64 object-contain"
                 />
@@ -192,7 +192,7 @@ const About = () => {
             <div className="text-center">
               <div className="mb-4 overflow-hidden rounded-full">
                 <img
-                  src="/images/team/team-member2.svg"
+                  src="/kinsonsterrazo/images/team/team-member2.svg"
                   alt="Sarah Mitchell"
                   className="mx-auto h-64 w-64 object-contain"
                 />
@@ -213,7 +213,7 @@ const About = () => {
             <div className="text-center">
               <div className="mb-4 overflow-hidden rounded-full">
                 <img
-                  src="/images/team/team-member3.svg"
+                  src="/kinsonsterrazo/images/team/team-member3.svg"
                   alt="David Rodriguez"
                   className="mx-auto h-64 w-64 object-contain"
                 />
