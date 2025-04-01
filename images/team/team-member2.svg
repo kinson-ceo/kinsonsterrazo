@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="300" height="300" viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background rectangle -->
+  <rect width="300" height="300" fill="#F5F5F5"/>
+  
+  <!-- Person silhouette background - slightly different shape -->
+  <circle cx="150" cy="110" r="65" fill="#E5E5E5"/>
+  <path d="M80 300C80 250 120 230 150 230C180 230 220 250 220 300" fill="#E5E5E5"/>
+  
+  <!-- Minimalist person silhouette - different hairstyle -->
+  <path d="M110 100C110 80 125 60 150 60C175 60 190 80 190 100V130C190 155 175 170 150 170C125 170 110 155 110 130V100Z" fill="#444444"/>
+  <path d="M110 220C110 190 125 175 150 175C175 175 190 190 190 220V300H110V220Z" fill="#444444"/>
+  
+  <!-- Gold accent details - different pattern -->
+  <rect x="110" y="175" width="80" height="2" fill="#D4AF37"/>
+  <path d="M115 95C115 75 125 65 150 65C175 65 185 75 185 95" stroke="#D4AF37" stroke-width="2" stroke-dasharray="2 2" fill="none"/>
+  
+  <!-- Placeholder text for name - slightly different position -->
+  <rect x="90" y="255" width="120" height="10" rx="5" fill="#AAAAAA"/>
+  <rect x="110" y="275" width="80" height="8" rx="4" fill="#AAAAAA"/>
+</svg> 

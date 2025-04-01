@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="300" height="300" viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background rectangle -->
+  <rect width="300" height="300" fill="#F5F5F5"/>
+  
+  <!-- Person silhouette background - unique shape -->
+  <ellipse cx="150" cy="115" rx="60" ry="70" fill="#E8E8E8"/>
+  <path d="M90 300C90 260 125 240 150 240C175 240 210 260 210 300" fill="#E8E8E8"/>
+  
+  <!-- Minimalist person silhouette - with glasses -->
+  <circle cx="150" cy="115" r="45" fill="#333333"/>
+  <!-- Glasses -->
+  <circle cx="135" cy="110" r="15" fill="none" stroke="#D4AF37" stroke-width="2"/>
+  <circle cx="165" cy="110" r="15" fill="none" stroke="#D4AF37" stroke-width="2"/>
+  <line x1="150" y1="110" x2="150" y2="110" stroke="#D4AF37" stroke-width="2"/>
+  
+  <!-- Body -->
+  <path d="M115 230C115 200 130 180 150 180C170 180 185 200 185 230V300H115V230Z" fill="#333333"/>
+  
+  <!-- Unique tie/scarf detail -->
+  <path d="M150 180L140 230L150 240L160 230L150 180Z" fill="#D4AF37"/>
+  
+  <!-- Placeholder text for name - unique position -->
+  <rect x="90" y="265" width="120" height="10" rx="5" fill="#AAAAAA"/>
+  <rect x="110" y="285" width="80" height="8" rx="4" fill="#AAAAAA"/>
+</svg>

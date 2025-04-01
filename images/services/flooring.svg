@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="400" height="400" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background floor rectangle -->
+  <rect width="400" height="400" rx="8" fill="#F8F9FA"/>
+  
+  <!-- Terrazzo pattern -->
+  <g>
+    <!-- Large chunks -->
+    <circle cx="50" cy="70" r="15" fill="#D4AF37" opacity="0.8"/>
+    <circle cx="150" cy="250" r="18" fill="#C5B358" opacity="0.7"/>
+    <circle cx="300" cy="100" r="12" fill="#E5C100" opacity="0.8"/>
+    <circle cx="240" cy="330" r="20" fill="#D4AF37" opacity="0.6"/>
+    <rect x="80" y="150" width="25" height="25" rx="4" fill="#C5B358" opacity="0.7"/>
+    <rect x="350" y="200" width="20" height="20" rx="4" fill="#D4AF37" opacity="0.8"/>
+    <rect x="200" y="50" width="30" height="30" rx="4" fill="#E5C100" opacity="0.6"/>
+    
+    <!-- Medium chunks -->
+    <circle cx="120" cy="100" r="8" fill="#D4AF37" opacity="0.7"/>
+    <circle cx="280" cy="210" r="10" fill="#C5B358" opacity="0.6"/>
+    <circle cx="70" cy="320" r="7" fill="#E5C100" opacity="0.7"/>
+    <circle cx="330" cy="280" r="9" fill="#D4AF37" opacity="0.5"/>
+    <rect x="180" y="180" width="15" height="15" rx="3" fill="#C5B358" opacity="0.6"/>
+    <rect x="250" cy="70" width="12" height="12" rx="3" fill="#D4AF37" opacity="0.7"/>
+    <rect x="90" cy="230" width="14" height="14" rx="3" fill="#E5C100" opacity="0.5"/>
+    
+    <!-- Small chunks -->
+    <circle cx="30" cy="200" r="4" fill="#D4AF37" opacity="0.6"/>
+    <circle cx="210" cy="120" r="5" fill="#C5B358" opacity="0.5"/>
+    <circle cx="350" cy="350" r="3" fill="#E5C100" opacity="0.6"/>
+    <circle cx="170" cy="300" r="4" fill="#D4AF37" opacity="0.5"/>
+    <rect x="300" y="160" width="8" height="8" rx="2" fill="#C5B358" opacity="0.5"/>
+    <rect x="60" y="90" width="6" height="6" rx="2" fill="#D4AF37" opacity="0.6"/>
+    <rect x="230" y="260" width="7" height="7" rx="2" fill="#E5C100" opacity="0.4"/>
+  </g>
+  
+  <!-- Floor shine effect -->
+  <path d="M0 0 L400 400" stroke="#FFFFFF" stroke-width="2" stroke-opacity="0.2"/>
+  <path d="M400 0 L0 400" stroke="#FFFFFF" stroke-width="2" stroke-opacity="0.2"/>
+  
+  <!-- Floor grid lines -->
+  <path d="M 0,100 H 400" stroke="#000000" stroke-opacity="0.05" stroke-width="1" />
+  <path d="M 0,200 H 400" stroke="#000000" stroke-opacity="0.05" stroke-width="1" />
+  <path d="M 0,300 H 400" stroke="#000000" stroke-opacity="0.05" stroke-width="1" />
+  <path d="M 100,0 V 400" stroke="#000000" stroke-opacity="0.05" stroke-width="1" />
+  <path d="M 200,0 V 400" stroke="#000000" stroke-opacity="0.05" stroke-width="1" />
+  <path d="M 300,0 V 400" stroke="#000000" stroke-opacity="0.05" stroke-width="1" />
+  
+  <!-- Flooring text -->
+  <g transform="translate(120, 360)">
+    <rect x="0" y="-30" width="160" height="40" rx="8" fill="#D4AF37" opacity="0.2"/>
+    <text x="80" y="0" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#333333" text-anchor="middle" dominant-baseline="middle">FLOORING</text>
+  </g>
+</svg> 

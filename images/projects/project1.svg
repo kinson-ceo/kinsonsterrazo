@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="400" height="300" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="400" height="300" fill="#F8F9FA"/>
+  
+  <!-- Floor plan outline -->
+  <rect x="50" y="50" width="300" height="200" stroke="#333333" stroke-width="2" fill="#FFFFFF"/>
+  
+  <!-- Room divisions -->
+  <line x1="200" y1="50" x2="200" y2="250" stroke="#333333" stroke-width="1" stroke-dasharray="4 2"/>
+  <line x1="50" y1="150" x2="350" y2="150" stroke="#333333" stroke-width="1" stroke-dasharray="4 2"/>
+  
+  <!-- Terrazzo flooring in main area -->
+  <rect x="201" y="51" width="148" height="98" fill="#F5F5F5"/>
+  
+  <!-- Terrazzo pattern - main area -->
+  <g clip-path="url(#main-area-clip)">
+    <!-- Large chunks -->
+    <circle cx="230" cy="80" r="8" fill="#D4AF37" opacity="0.8"/>
+    <circle cx="270" cy="100" r="10" fill="#C5B358" opacity="0.7"/>
+    <circle cx="310" cy="70" r="6" fill="#E5C100" opacity="0.8"/>
+    <circle cx="290" cy="120" r="9" fill="#D4AF37" opacity="0.6"/>
+    <rect x="250" y="90" width="12" height="12" rx="2" fill="#C5B358" opacity="0.7"/>
+    <rect x="330" y="110" width="8" height="8" rx="2" fill="#D4AF37" opacity="0.8"/>
+    <rect x="220" y="110" width="10" height="10" rx="2" fill="#E5C100" opacity="0.6"/>
+    
+    <!-- Medium chunks -->
+    <circle cx="240" cy="70" r="4" fill="#D4AF37" opacity="0.7"/>
+    <circle cx="280" cy="90" r="5" fill="#C5B358" opacity="0.6"/>
+    <circle cx="320" cy="120" r="3" fill="#E5C100" opacity="0.7"/>
+    <circle cx="260" cy="110" r="4" fill="#D4AF37" opacity="0.5"/>
+    <rect x="300" y="80" width="6" height="6" rx="1" fill="#C5B358" opacity="0.6"/>
+    <rect x="230" y="100" width="5" height="5" rx="1" fill="#D4AF37" opacity="0.7"/>
+    <rect x="340" y="90" width="4" height="4" rx="1" fill="#E5C100" opacity="0.5"/>
+  </g>
+  
+  <!-- Terrazzo pattern grid lines -->
+  <line x1="225" y1="51" x2="225" y2="149" stroke="#EEEEEE" stroke-width="0.5"/>
+  <line x1="250" y1="51" x2="250" y2="149" stroke="#EEEEEE" stroke-width="0.5"/>
+  <line x1="275" y1="51" x2="275" y2="149" stroke="#EEEEEE" stroke-width="0.5"/>
+  <line x1="300" y1="51" x2="300" y2="149" stroke="#EEEEEE" stroke-width="0.5"/>
+  <line x1="325" y1="51" x2="325" y2="149" stroke="#EEEEEE" stroke-width="0.5"/>
+  
+  <line x1="201" y1="75" x2="349" y2="75" stroke="#EEEEEE" stroke-width="0.5"/>
+  <line x1="201" y1="100" x2="349" y2="100" stroke="#EEEEEE" stroke-width="0.5"/>
+  <line x1="201" y1="125" x2="349" y2="125" stroke="#EEEEEE" stroke-width="0.5"/>
+  
+  <!-- Furniture elements -->
+  <rect x="70" y="70" width="80" height="40" rx="2" fill="#DDDDDD"/> <!-- Table -->
+  <rect x="80" y="170" width="40" height="60" fill="#DDDDDD"/> <!-- Cabinet -->
+  <circle cx="275" cy="200" r="30" fill="#DDDDDD"/> <!-- Round table -->
+  
+  <!-- Project label -->
+  <rect x="100" y="220" width="200" height="30" rx="6" fill="#D4AF37" opacity="0.2"/>
+  <text x="200" y="240" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#333333" text-anchor="middle" dominant-baseline="middle">COMMERCIAL FLOORING PROJECT</text>
+  
+  <!-- Define clip path for terrazzo pattern -->
+  <defs>
+    <clipPath id="main-area-clip">
+      <rect x="201" y="51" width="148" height="98"/>
+    </clipPath>
+  </defs>
+</svg> 
