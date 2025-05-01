@@ -1,0 +1,57 @@
+{
+    "common": {
+        "languageName": "Kiswahili"
+    },
+    "navbar": {
+        "home": "Nyumbani",
+        "aboutUs": "Kuhusu Sisi",
+        "services": "Huduma",
+        "projects": "Miradi",
+        "testimonials": "Shuhuda",
+        "contact": "Wasiliana",
+        "blog": "Blogu"
+    },
+    "hero": {
+        "getQuote": "Pata Nukuu ya Bure",
+        "viewWork": "Tazama Kazi Zetu",
+        "tagline": "Sakafu zinazodumu kipindi chote"
+    },
+    "about": {
+        "ourStory": "Historia Yetu",
+        "ourMission": "Dhamira Yetu",
+        "whyChooseUs": "Kwa Nini Utuchague Sisi?",
+        "meetOurTeam": "Pata Kuijua Timu Yetu"
+    },
+    "footer": {
+        "copyright": "© {{year}} Kinsons Terrazzo. Haki Zote Zimehifadhiwa.",
+        "address": "123 Business Avenue, Nairobi, Kenya",
+        "phone": "+254 123 456 789",
+        "email": "info@kinsonsterrazzo.com"
+    },
+    "contact": {
+        "title": "Wasiliana Nasi",
+        "subtitle": "Una maswali au uko tayari kuanza mradi wako wa terrazzo? Wasiliana na timu yetu ya wataalamu.",
+        "form": {
+            "title": "Tutumie Ujumbe",
+            "fullName": "Jina Kamili",
+            "email": "Anwani ya Barua Pepe",
+            "phone": "Namba ya Simu",
+            "subject": "Mada",
+            "details": "Maelezo ya Ujumbe",
+            "comment": "Maoni ya Ziada",
+            "attachments": "Viambatisho",
+            "attachmentsHint": "Faili 3 kwa upeo",
+            "submit": "Tuma Ujumbe",
+            "submitting": "Inatuma...",
+            "success": "Asante! Ujumbe wako umetumwa kwa mafanikio.",
+            "error": "Kulikuwa na hitilafu katika kutuma ujumbe wako. Tafadhali jaribu tena."
+        },
+        "info": {
+            "title": "Maelezo ya Mawasiliano",
+            "location": "Eneo Letu",
+            "phone": "Simu",
+            "email": "Barua Pepe",
+            "businessHours": "Saa za Biashara"
+        }
+    }
+}

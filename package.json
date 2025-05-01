@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://kinson-ceo.github.io/kinsonsterrazo",
+  "homepage": "https://kinson-ceo.github.io/kinsonsterrazzo",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
@@ -16,10 +16,16 @@
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
+    "axios": "^1.9.0",
     "flowbite-react": "^0.11.0",
+    "i18next": "^25.0.1",
+    "i18next-browser-languagedetector": "^8.0.5",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "react-router-dom": "^7.4.1"
+    "react-i18next": "^15.5.1",
+    "react-icons": "^5.5.0",
+    "react-router-dom": "^7.4.1",
+    "zustand": "^5.0.3"
   },
   "devDependencies": {
     "@eslint/js": "^9.21.0",

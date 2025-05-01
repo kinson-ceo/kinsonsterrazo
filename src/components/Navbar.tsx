@@ -1,11 +1,18 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { DarkThemeToggle } from "flowbite-react";
+import { DarkThemeToggle, Button } from "flowbite-react";
+import { useTranslation } from "react-i18next";
+import { languages } from "../i18n";
+import { useAppStore } from "../store/store";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
+  const { i18n } = useTranslation();
+  const { setLanguage } = useAppStore();
+
+  const { fetchNavData, navData } = useAppStore();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -34,6 +41,15 @@ const Navbar = () => {
     setIsMenuOpen(false);
   }, [location]);
 
+  useEffect(() => {
+    fetchNavData();
+  }, [fetchNavData, i18n.language]);
+
+  // Handle language change
+  const changeLanguage = (lang: string) => {
+    setLanguage(lang as keyof typeof languages);
+  };
+
   return (
     <nav
       className={`fixed z-50 w-full transition-all duration-300 ${
@@ -43,24 +59,46 @@ const Navbar = () => {
       }`}
     >
       <div className="mx-auto flex max-w-screen-xl flex-wrap items-center justify-between p-4">
-        <Link to="/kinsonsterrazo" className="flex items-center">
+        <Link to="/kinsonsterrazzo" className="flex items-center">
           <img
-            src="/kinsonsterrazo/images/logo.svg"
+            src="/kinsonsterrazzo/images/logo.svg"
             className="mr-3 h-12 w-12"
             alt="Kinsons Terrazzo Logo"
           />
           <div className="flex flex-col">
             <span className="text-xl font-semibold whitespace-nowrap text-gray-900 dark:text-white">
-              Kinsons Terrazzo
+              {navData?.nav?.company_name}
             </span>
             <span className="text-xs text-gray-600 dark:text-gray-400">
-              Floors that endure the test of time
+              {navData?.nav?.tagline}
             </span>
           </div>
         </Link>
 
         <div className="flex md:order-2">
           <DarkThemeToggle className="mr-2" />
+
+          {/* Language Selector */}
+          <div className="mr-2 flex">
+            {Object.entries(languages).map(([code, langInfo]) => (
+              <Button
+                key={code}
+                size="xs"
+                color={i18n.language === code ? "primary" : "gray"}
+                onClick={() => changeLanguage(code)}
+                className={
+                  code === "en"
+                    ? "rounded-r-none"
+                    : code === "sw"
+                      ? "rounded-l-none"
+                      : ""
+                }
+              >
+                {langInfo.flag}
+              </Button>
+            ))}
+          </div>
+
           <button
             type="button"
             className="inline-flex h-10 w-10 items-center justify-center rounded-lg p-2 text-sm text-gray-500 hover:bg-gray-100 focus:ring-2 focus:ring-gray-200 focus:outline-none md:hidden dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
@@ -94,98 +132,101 @@ const Navbar = () => {
           id="navbar-sticky"
         >
           <ul className="mt-4 flex flex-col rounded-lg border border-gray-100 bg-gray-50 p-4 font-medium md:mt-0 md:flex-row md:space-x-8 md:border-0 md:bg-transparent md:p-0 dark:border-gray-700 dark:bg-gray-800 md:dark:bg-transparent">
-            <li>
-              <Link
-                to="/kinsonsterrazo"
-                className={`block rounded py-2 pr-4 pl-3 md:bg-transparent md:p-0 ${
-                  isActive("/kinsonsterrazo")
-                    ? "text-primary-600 md:text-primary-600 dark:text-primary-500 md:dark:text-primary-500"
-                    : "md:hover:text-primary-600 md:dark:hover:text-primary-500 text-gray-900 hover:bg-gray-100 md:hover:bg-transparent dark:text-white dark:hover:bg-gray-700 md:dark:hover:bg-transparent"
-                }`}
-                aria-current={isActive("/kinsonsterrazo") ? "page" : undefined}
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Home
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/kinsonsterrazo/about"
-                className={`block rounded py-2 pr-4 pl-3 md:p-0 ${
-                  isActive("/kinsonsterrazo/about")
-                    ? "text-primary-600 md:text-primary-600 dark:text-primary-500 md:dark:text-primary-500"
-                    : "md:hover:text-primary-600 md:dark:hover:text-primary-500 text-gray-900 hover:bg-gray-100 md:hover:bg-transparent dark:text-white dark:hover:bg-gray-700 md:dark:hover:bg-transparent"
-                }`}
-                onClick={() => setIsMenuOpen(false)}
-              >
-                About Us
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/kinsonsterrazo/services"
-                className={`block rounded py-2 pr-4 pl-3 md:p-0 ${
-                  isActive("/kinsonsterrazo/services")
-                    ? "text-primary-600 md:text-primary-600 dark:text-primary-500 md:dark:text-primary-500"
-                    : "md:hover:text-primary-600 md:dark:hover:text-primary-500 text-gray-900 hover:bg-gray-100 md:hover:bg-transparent dark:text-white dark:hover:bg-gray-700 md:dark:hover:bg-transparent"
-                }`}
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Services
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/kinsonsterrazo/projects"
-                className={`block rounded py-2 pr-4 pl-3 md:p-0 ${
-                  isActive("/kinsonsterrazo/projects")
-                    ? "text-primary-600 md:text-primary-600 dark:text-primary-500 md:dark:text-primary-500"
-                    : "md:hover:text-primary-600 md:dark:hover:text-primary-500 text-gray-900 hover:bg-gray-100 md:hover:bg-transparent dark:text-white dark:hover:bg-gray-700 md:dark:hover:bg-transparent"
-                }`}
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Projects
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/kinsonsterrazo/testimonials"
-                className={`block rounded py-2 pr-4 pl-3 md:p-0 ${
-                  isActive("/kinsonsterrazo/testimonials")
-                    ? "text-primary-600 md:text-primary-600 dark:text-primary-500 md:dark:text-primary-500"
-                    : "md:hover:text-primary-600 md:dark:hover:text-primary-500 text-gray-900 hover:bg-gray-100 md:hover:bg-transparent dark:text-white dark:hover:bg-gray-700 md:dark:hover:bg-transparent"
-                }`}
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Testimonials
-              </Link>
-            </li>
+            {navData?.nav_links?.map((data: any) => (
+              <li>
+                <Link
+                  to={data?.link}
+                  className={`block rounded py-2 pr-4 pl-3 md:bg-transparent md:p-0 ${
+                    isActive(data?.link)
+                      ? "text-primary-600 md:text-primary-600 dark:text-primary-500 md:dark:text-primary-500"
+                      : "md:hover:text-primary-600 md:dark:hover:text-primary-500 text-gray-900 hover:bg-gray-100 md:hover:bg-transparent dark:text-white dark:hover:bg-gray-700 md:dark:hover:bg-transparent"
+                  }`}
+                  aria-current={isActive(data?.link) ? "page" : undefined}
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {data?.nav_text}
+                </Link>
+              </li>
+            ))}
+
             {/* <li>
               <Link
-                to="/kinsonsterrazo/blog"
+                to="/kinsonsterrazzo/about"
                 className={`block rounded py-2 pr-4 pl-3 md:p-0 ${
-                  isActive("/kinsonsterrazo/blog")
+                  isActive("/kinsonsterrazzo/about")
                     ? "text-primary-600 md:text-primary-600 dark:text-primary-500 md:dark:text-primary-500"
                     : "md:hover:text-primary-600 md:dark:hover:text-primary-500 text-gray-900 hover:bg-gray-100 md:hover:bg-transparent dark:text-white dark:hover:bg-gray-700 md:dark:hover:bg-transparent"
                 }`}
                 onClick={() => setIsMenuOpen(false)}
               >
-                Blog
-              </Link>
-            </li> */}
-            <li>
-              <Link
-                to="/kinsonsterrazo/contact"
-                className={`block rounded py-2 pr-4 pl-3 md:p-0 ${
-                  isActive("/kinsonsterrazo/contact")
-                    ? "text-primary-600 md:text-primary-600 dark:text-primary-500 md:dark:text-primary-500"
-                    : "md:hover:text-primary-600 md:dark:hover:text-primary-500 text-gray-900 hover:bg-gray-100 md:hover:bg-transparent dark:text-white dark:hover:bg-gray-700 md:dark:hover:bg-transparent"
-                }`}
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Contact
+                {t("navbar.aboutUs")}
               </Link>
             </li>
+            <li>
+              <Link
+                to="/kinsonsterrazzo/services"
+                className={`block rounded py-2 pr-4 pl-3 md:p-0 ${
+                  isActive("/kinsonsterrazzo/services")
+                    ? "text-primary-600 md:text-primary-600 dark:text-primary-500 md:dark:text-primary-500"
+                    : "md:hover:text-primary-600 md:dark:hover:text-primary-500 text-gray-900 hover:bg-gray-100 md:hover:bg-transparent dark:text-white dark:hover:bg-gray-700 md:dark:hover:bg-transparent"
+                }`}
+                onClick={() => setIsMenuOpen(false)}
+              >
+                {t("navbar.services")}
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/kinsonsterrazzo/projects"
+                className={`block rounded py-2 pr-4 pl-3 md:p-0 ${
+                  isActive("/kinsonsterrazzo/projects")
+                    ? "text-primary-600 md:text-primary-600 dark:text-primary-500 md:dark:text-primary-500"
+                    : "md:hover:text-primary-600 md:dark:hover:text-primary-500 text-gray-900 hover:bg-gray-100 md:hover:bg-transparent dark:text-white dark:hover:bg-gray-700 md:dark:hover:bg-transparent"
+                }`}
+                onClick={() => setIsMenuOpen(false)}
+              >
+                {t("navbar.projects")}
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/kinsonsterrazzo/testimonials"
+                className={`block rounded py-2 pr-4 pl-3 md:p-0 ${
+                  isActive("/kinsonsterrazzo/testimonials")
+                    ? "text-primary-600 md:text-primary-600 dark:text-primary-500 md:dark:text-primary-500"
+                    : "md:hover:text-primary-600 md:dark:hover:text-primary-500 text-gray-900 hover:bg-gray-100 md:hover:bg-transparent dark:text-white dark:hover:bg-gray-700 md:dark:hover:bg-transparent"
+                }`}
+                onClick={() => setIsMenuOpen(false)}
+              >
+                {t("navbar.testimonials")}
+              </Link>
+            </li> */}
+            {/* <li>
+              <Link
+                to="/kinsonsterrazzo/blog"
+                className={`block rounded py-2 pr-4 pl-3 md:p-0 ${
+                  isActive("/kinsonsterrazzo/blog")
+                    ? "text-primary-600 md:text-primary-600 dark:text-primary-500 md:dark:text-primary-500"
+                    : "md:hover:text-primary-600 md:dark:hover:text-primary-500 text-gray-900 hover:bg-gray-100 md:hover:bg-transparent dark:text-white dark:hover:bg-gray-700 md:dark:hover:bg-transparent"
+                }`}
+                onClick={() => setIsMenuOpen(false)}
+              >
+                {t("navbar.blog")}
+              </Link>
+            </li> */}
+            {/* <li>
+              <Link
+                to="/kinsonsterrazzo/contact"
+                className={`block rounded py-2 pr-4 pl-3 md:p-0 ${
+                  isActive("/kinsonsterrazzo/contact")
+                    ? "text-primary-600 md:text-primary-600 dark:text-primary-500 md:dark:text-primary-500"
+                    : "md:hover:text-primary-600 md:dark:hover:text-primary-500 text-gray-900 hover:bg-gray-100 md:hover:bg-transparent dark:text-white dark:hover:bg-gray-700 md:dark:hover:bg-transparent"
+                }`}
+                onClick={() => setIsMenuOpen(false)}
+              >
+                {t("navbar.contact")}
+              </Link>
+            </li> */}
           </ul>
         </div>
       </div>

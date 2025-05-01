@@ -1,0 +1,57 @@
+{
+    "common": {
+        "languageName": "English"
+    },
+    "navbar": {
+        "home": "Home",
+        "aboutUs": "About Us",
+        "services": "Services",
+        "projects": "Projects",
+        "testimonials": "Testimonials",
+        "contact": "Contact",
+        "blog": "Blog"
+    },
+    "hero": {
+        "getQuote": "Get a Free Quote",
+        "viewWork": "View Our Work",
+        "tagline": "Floors that endure the test of time"
+    },
+    "about": {
+        "ourStory": "Our Story",
+        "ourMission": "Our Mission",
+        "whyChooseUs": "Why Choose Us?",
+        "meetOurTeam": "Meet Our Team"
+    },
+    "footer": {
+        "copyright": "© {{year}} Kinsons Terrazzo. All Rights Reserved.",
+        "address": "123 Business Avenue, Nairobi, Kenya",
+        "phone": "+254 123 456 789",
+        "email": "info@kinsonsterrazzo.com"
+    },
+    "contact": {
+        "title": "Contact Us",
+        "subtitle": "Have questions or ready to start your terrazzo project? Get in touch with our team of experts.",
+        "form": {
+            "title": "Send Us a Message",
+            "fullName": "Full Name",
+            "email": "Email Address",
+            "phone": "Phone Number",
+            "subject": "Subject",
+            "details": "Message Details",
+            "comment": "Additional Comments",
+            "attachments": "Attachments",
+            "attachmentsHint": "Maximum 3 files",
+            "submit": "Send Message",
+            "submitting": "Sending...",
+            "success": "Thank you! Your message has been sent successfully.",
+            "error": "There was an error sending your message. Please try again."
+        },
+        "info": {
+            "title": "Contact Information",
+            "location": "Our Location",
+            "phone": "Phone",
+            "email": "Email",
+            "businessHours": "Business Hours"
+        }
+    }
+}
