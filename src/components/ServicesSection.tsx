@@ -3,6 +3,7 @@ import { Button, Card } from "flowbite-react";
 import { useAppStore } from "../store/store";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
+import Shimmer from "./Shimmer";
 
 // Icons for services
 // const serviceIcons = {
@@ -110,8 +111,31 @@ const ServicesSection = () => {
     return (
       <section className="bg-gray-50 py-20 dark:bg-gray-800">
         <div className="container mx-auto px-4">
-          <div className="flex justify-center">
-            <div className="border-t-primary-600 h-12 w-12 animate-spin rounded-full border-4 border-gray-300"></div>
+          <div className="mb-16 text-center">
+            <Shimmer width="300px" height="40px" className="mx-auto mb-4" />
+            <Shimmer width="600px" height="24px" className="mx-auto" />
+          </div>
+
+          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+            {[1, 2, 3, 4].map((i) => (
+              <div
+                key={i}
+                className="rounded-lg bg-white p-6 shadow-md dark:bg-gray-700"
+              >
+                <div className="flex flex-col items-center gap-4 text-center">
+                  <Shimmer
+                    width="64px"
+                    height="64px"
+                    borderRadius="9999px"
+                    className="mb-2"
+                  />
+                  <Shimmer width="80%" height="28px" />
+                  <Shimmer width="100%" height="192px" className="mb-4" />
+                  <Shimmer width="100%" height="72px" className="mb-4" />
+                  <Shimmer width="120px" height="40px" borderRadius="9999px" />
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>

@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { useAppStore } from "../store/store";
+import Shimmer from "../components/Shimmer";
 
 const About = () => {
   const { t } = useTranslation();
@@ -13,9 +14,73 @@ const About = () => {
 
   if (loading)
     return (
-      <div className="flex min-h-screen items-center justify-center">
-        Loading...
-      </div>
+      <section className="bg-white py-24 dark:bg-gray-900">
+        <div className="container mx-auto px-4">
+          <div className="mb-16 text-center">
+            <Shimmer width="400px" height="48px" className="mx-auto mb-4" />
+            <Shimmer width="600px" height="24px" className="mx-auto" />
+          </div>
+
+          <div className="grid gap-16 md:grid-cols-2">
+            <div>
+              <Shimmer width="200px" height="36px" className="mb-6" />
+              <div className="space-y-4">
+                {[1, 2, 3].map((i) => (
+                  <Shimmer key={i} width="100%" height="72px" />
+                ))}
+              </div>
+
+              <Shimmer width="200px" height="36px" className="mt-12 mb-6" />
+              <Shimmer width="100%" height="96px" />
+            </div>
+
+            <div className="space-y-8">
+              <Shimmer height="300px" className="rounded-lg" />
+              <div className="rounded-lg bg-gray-50 p-8 dark:bg-gray-800">
+                <Shimmer width="200px" height="28px" className="mb-4" />
+                <div className="space-y-4">
+                  {[1, 2, 3, 4].map((i) => (
+                    <div key={i} className="flex items-start">
+                      <Shimmer
+                        width="20px"
+                        height="20px"
+                        className="mt-1 mr-2"
+                      />
+                      <Shimmer width="100%" height="48px" />
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-24">
+            <Shimmer width="300px" height="36px" className="mx-auto mb-12" />
+            <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+              {[1, 2, 3, 4].map((i) => (
+                <div key={i} className="text-center">
+                  <Shimmer
+                    width="256px"
+                    height="256px"
+                    className="mx-auto mb-4 rounded-full"
+                  />
+                  <Shimmer
+                    width="150px"
+                    height="28px"
+                    className="mx-auto mb-2"
+                  />
+                  <Shimmer
+                    width="100px"
+                    height="24px"
+                    className="mx-auto mb-2"
+                  />
+                  <Shimmer width="100%" height="48px" />
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
     );
   if (error)
     return (

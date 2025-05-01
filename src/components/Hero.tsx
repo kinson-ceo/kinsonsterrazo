@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { useAppStore } from "../store/store";
+import Shimmer from "./Shimmer";
 
 const Hero = () => {
   const { t } = useTranslation();
@@ -15,9 +16,41 @@ const Hero = () => {
 
   if (loading)
     return (
-      <div className="flex min-h-screen items-center justify-center">
-        Loading...
-      </div>
+      <section className="relative min-h-screen w-full bg-white dark:bg-gray-900">
+        <div className="relative z-10 flex min-h-screen items-center justify-center px-4 py-24 sm:px-6 lg:px-8">
+          <div className="flex w-full max-w-7xl flex-col items-center gap-12 md:flex-row md:justify-between">
+            <div className="flex max-w-2xl flex-col items-start gap-6">
+              <div className="space-y-2">
+                <Shimmer width="400px" height="60px" className="mb-2" />
+                <Shimmer width="500px" height="60px" />
+              </div>
+              <Shimmer width="600px" height="28px" />
+              <div className="flex flex-wrap gap-4">
+                <Shimmer width="150px" height="48px" borderRadius="9999px" />
+                <Shimmer width="150px" height="48px" borderRadius="9999px" />
+              </div>
+            </div>
+            <div className="hidden md:block">
+              <Shimmer width="450px" height="450px" borderRadius="9999px" />
+            </div>
+          </div>
+        </div>
+
+        {/* Curved Bottom Edge */}
+        <div className="absolute right-0 bottom-0 left-0">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 1440 320"
+            className="text-gray-50 dark:text-gray-800"
+            fill="currentColor"
+          >
+            <path
+              fillOpacity="1"
+              d="M0,224L48,208C96,192,192,160,288,165.3C384,171,480,213,576,234.7C672,256,768,256,864,234.7C960,213,1056,171,1152,138.7C1248,107,1344,85,1392,74.7L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+            />
+          </svg>
+        </div>
+      </section>
     );
   if (error)
     return (

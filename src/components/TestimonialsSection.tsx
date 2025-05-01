@@ -3,6 +3,7 @@ import { Card, Carousel } from "flowbite-react";
 import { useAppStore } from "../store/store";
 import { useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import Shimmer from "./Shimmer";
 
 const TestimonialsSection = () => {
   const location = useLocation();
@@ -50,8 +51,38 @@ const TestimonialsSection = () => {
     return (
       <section className="bg-white py-24 dark:bg-gray-900">
         <div className="container mx-auto px-4">
-          <div className="flex justify-center">
-            <div className="border-t-primary-600 h-12 w-12 animate-spin rounded-full border-4 border-gray-300"></div>
+          <div className="mb-16 text-center">
+            <Shimmer width="300px" height="40px" className="mx-auto mb-4" />
+            <Shimmer width="600px" height="24px" className="mx-auto" />
+          </div>
+
+          <div className="h-56 sm:h-64 xl:h-80 2xl:h-96">
+            <div className="px-4">
+              <div className="h-full overflow-hidden rounded-lg bg-white p-6 shadow-lg dark:bg-gray-800">
+                <div className="flex h-full flex-col justify-between">
+                  <div>
+                    <div className="mb-4 flex gap-1">
+                      {[1, 2, 3, 4, 5].map((i) => (
+                        <Shimmer key={i} width="20px" height="20px" />
+                      ))}
+                    </div>
+                    <Shimmer width="100%" height="72px" className="mb-6" />
+                  </div>
+                  <div className="flex items-center">
+                    <Shimmer
+                      width="64px"
+                      height="64px"
+                      borderRadius="8px"
+                      className="mr-4"
+                    />
+                    <div>
+                      <Shimmer width="120px" height="24px" className="mb-2" />
+                      <Shimmer width="200px" height="16px" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>

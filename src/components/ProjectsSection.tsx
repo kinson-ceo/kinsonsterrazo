@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Button } from "flowbite-react";
 import { useAppStore } from "../store/store";
 import { useTranslation } from "react-i18next";
+import Shimmer from "./Shimmer";
 
 const ProjectsSection = () => {
   const [activeCategory, setActiveCategory] = useState("all");
@@ -38,13 +39,41 @@ const ProjectsSection = () => {
 
   if (loading) {
     return (
-      <div className="bg-gray-50 py-24 dark:bg-gray-800">
+      <section className="bg-gray-50 py-24 dark:bg-gray-800">
         <div className="container mx-auto px-4">
-          <div className="flex justify-center">
-            <div className="border-t-primary-600 h-12 w-12 animate-spin rounded-full border-4 border-gray-300"></div>
+          <div className="mb-16 text-center">
+            <Shimmer width="300px" height="40px" className="mx-auto mb-4" />
+            <Shimmer width="600px" height="24px" className="mx-auto" />
+          </div>
+
+          <div className="mb-12 flex flex-wrap justify-center gap-2">
+            {[1, 2, 3, 4].map((i) => (
+              <Shimmer
+                key={i}
+                width="120px"
+                height="40px"
+                borderRadius="9999px"
+              />
+            ))}
+          </div>
+
+          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+            {[1, 2, 3, 4, 5, 6].map((i) => (
+              <div
+                key={i}
+                className="overflow-hidden rounded-lg bg-white shadow-md dark:bg-gray-700"
+              >
+                <Shimmer height="256px" />
+                <div className="p-6">
+                  <Shimmer width="80%" height="28px" className="mb-4" />
+                  <Shimmer width="100%" height="72px" className="mb-4" />
+                  <Shimmer width="100%" height="40px" />
+                </div>
+              </div>
+            ))}
           </div>
         </div>
-      </div>
+      </section>
     );
   }
 

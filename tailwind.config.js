@@ -36,6 +36,14 @@ module.exports = {
       boxShadow: {
         terrazzo: "0 4px 20px rgba(0, 0, 0, 0.08)",
       },
+      keyframes: {
+        shimmer: {
+          "100%": { transform: "translateX(100%)" },
+        },
+      },
+      animation: {
+        shimmer: "shimmer 2s infinite linear",
+      },
     },
   },
   plugins: [require("flowbite/plugin")],

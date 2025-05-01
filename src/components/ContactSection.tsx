@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import { Button, TextInput, Textarea, Label } from "flowbite-react";
 import { useTranslation } from "react-i18next";
 import { useAppStore } from "../store/store";
+import Shimmer from "./Shimmer";
 
 const ContactSection = () => {
   const { t } = useTranslation();
@@ -78,9 +79,78 @@ const ContactSection = () => {
 
   if (loading)
     return (
-      <div className="flex min-h-screen items-center justify-center">
-        Loading...
-      </div>
+      <section className="bg-white py-24 dark:bg-gray-900">
+        <div className="container mx-auto px-4">
+          <div className="mb-16 text-center">
+            <Shimmer width="300px" height="40px" className="mx-auto mb-4" />
+            <Shimmer width="600px" height="24px" className="mx-auto" />
+          </div>
+
+          <div className="grid gap-10 lg:grid-cols-2">
+            {/* Contact Form Skeleton */}
+            <div className="rounded-lg bg-gray-50 p-8 shadow-md dark:bg-gray-800">
+              <Shimmer width="200px" height="32px" className="mb-6" />
+              <div className="grid gap-6">
+                <div className="grid gap-6 sm:grid-cols-2">
+                  <div>
+                    <Shimmer width="80px" height="20px" className="mb-2" />
+                    <Shimmer width="100%" height="40px" />
+                  </div>
+                  <div>
+                    <Shimmer width="80px" height="20px" className="mb-2" />
+                    <Shimmer width="100%" height="40px" />
+                  </div>
+                </div>
+                <div className="grid gap-6 sm:grid-cols-2">
+                  <div>
+                    <Shimmer width="80px" height="20px" className="mb-2" />
+                    <Shimmer width="100%" height="40px" />
+                  </div>
+                  <div>
+                    <Shimmer width="80px" height="20px" className="mb-2" />
+                    <Shimmer width="100%" height="40px" />
+                  </div>
+                </div>
+                <div>
+                  <Shimmer width="80px" height="20px" className="mb-2" />
+                  <Shimmer width="100%" height="120px" />
+                </div>
+                <div>
+                  <Shimmer width="80px" height="20px" className="mb-2" />
+                  <Shimmer width="100%" height="120px" />
+                </div>
+                <Shimmer width="100%" height="48px" borderRadius="9999px" />
+              </div>
+            </div>
+
+            {/* Contact Info Skeleton */}
+            <div>
+              <div className="mb-8 rounded-lg bg-gray-50 p-8 shadow-md dark:bg-gray-800">
+                <Shimmer width="200px" height="32px" className="mb-6" />
+                <div className="space-y-6">
+                  {[1, 2, 3, 4].map((i) => (
+                    <div key={i} className="flex items-start">
+                      <Shimmer
+                        width="40px"
+                        height="40px"
+                        borderRadius="9999px"
+                        className="mr-3"
+                      />
+                      <div className="flex-1">
+                        <Shimmer width="120px" height="24px" className="mb-2" />
+                        <Shimmer width="200px" height="20px" />
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Map Skeleton */}
+              <Shimmer height="320px" className="rounded-lg" />
+            </div>
+          </div>
+        </div>
+      </section>
     );
   if (error)
     return (
