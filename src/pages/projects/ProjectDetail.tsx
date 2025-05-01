@@ -115,8 +115,7 @@ const ProjectDetail = () => {
               className="h-auto w-full object-cover"
               onError={(e) => {
                 // Fallback image if the real image doesn't load
-                e.currentTarget.src =
-                  "/kinsonsterrazzo/images/projects/project1.svg";
+                e.currentTarget.src = "/images/projects/project1.svg";
               }}
             />
           </div>
@@ -240,7 +239,7 @@ const ProjectDetail = () => {
                         onError={(e) => {
                           // Fallback image if the real image doesn't load
                           e.currentTarget.src =
-                            "/kinsonsterrazzo/images/projects/default.svg";
+                            "/images/projects/default.svg";
                         }}
                       />
                     </div>

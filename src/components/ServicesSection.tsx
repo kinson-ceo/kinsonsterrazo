@@ -171,8 +171,7 @@ const ServicesSection = () => {
                     className="h-full w-full object-contain p-2 transition-transform duration-500 group-hover:scale-105"
                     onError={(e) => {
                       // Fallback image if the real image doesn't load
-                      e.currentTarget.src =
-                        "/kinsonsterrazzo/images/services/custom.svg";
+                      e.currentTarget.src = "/images/services/custom.svg";
                     }}
                   />
                 </div>

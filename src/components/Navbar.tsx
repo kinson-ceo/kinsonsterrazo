@@ -59,9 +59,9 @@ const Navbar = () => {
       }`}
     >
       <div className="mx-auto flex max-w-screen-xl flex-wrap items-center justify-between p-4">
-        <Link to="/kinsonsterrazzo" className="flex items-center">
+        <Link to="/" className="flex items-center">
           <img
-            src="/kinsonsterrazzo/images/logo.svg"
+            src="/images/logo.svg"
             className="mr-3 h-12 w-12"
             alt="Kinsons Terrazzo Logo"
           />
@@ -151,9 +151,9 @@ const Navbar = () => {
 
             {/* <li>
               <Link
-                to="/kinsonsterrazzo/about"
+                to="/about"
                 className={`block rounded py-2 pr-4 pl-3 md:p-0 ${
-                  isActive("/kinsonsterrazzo/about")
+                  isActive("/about")
                     ? "text-primary-600 md:text-primary-600 dark:text-primary-500 md:dark:text-primary-500"
                     : "md:hover:text-primary-600 md:dark:hover:text-primary-500 text-gray-900 hover:bg-gray-100 md:hover:bg-transparent dark:text-white dark:hover:bg-gray-700 md:dark:hover:bg-transparent"
                 }`}
@@ -164,9 +164,9 @@ const Navbar = () => {
             </li>
             <li>
               <Link
-                to="/kinsonsterrazzo/services"
+                to="/services"
                 className={`block rounded py-2 pr-4 pl-3 md:p-0 ${
-                  isActive("/kinsonsterrazzo/services")
+                  isActive("/services")
                     ? "text-primary-600 md:text-primary-600 dark:text-primary-500 md:dark:text-primary-500"
                     : "md:hover:text-primary-600 md:dark:hover:text-primary-500 text-gray-900 hover:bg-gray-100 md:hover:bg-transparent dark:text-white dark:hover:bg-gray-700 md:dark:hover:bg-transparent"
                 }`}
@@ -177,9 +177,9 @@ const Navbar = () => {
             </li>
             <li>
               <Link
-                to="/kinsonsterrazzo/projects"
+                to="/projects"
                 className={`block rounded py-2 pr-4 pl-3 md:p-0 ${
-                  isActive("/kinsonsterrazzo/projects")
+                  isActive("/projects")
                     ? "text-primary-600 md:text-primary-600 dark:text-primary-500 md:dark:text-primary-500"
                     : "md:hover:text-primary-600 md:dark:hover:text-primary-500 text-gray-900 hover:bg-gray-100 md:hover:bg-transparent dark:text-white dark:hover:bg-gray-700 md:dark:hover:bg-transparent"
                 }`}
@@ -190,9 +190,9 @@ const Navbar = () => {
             </li>
             <li>
               <Link
-                to="/kinsonsterrazzo/testimonials"
+                to="/testimonials"
                 className={`block rounded py-2 pr-4 pl-3 md:p-0 ${
-                  isActive("/kinsonsterrazzo/testimonials")
+                  isActive("/testimonials")
                     ? "text-primary-600 md:text-primary-600 dark:text-primary-500 md:dark:text-primary-500"
                     : "md:hover:text-primary-600 md:dark:hover:text-primary-500 text-gray-900 hover:bg-gray-100 md:hover:bg-transparent dark:text-white dark:hover:bg-gray-700 md:dark:hover:bg-transparent"
                 }`}
@@ -203,9 +203,9 @@ const Navbar = () => {
             </li> */}
             {/* <li>
               <Link
-                to="/kinsonsterrazzo/blog"
+                to="/blog"
                 className={`block rounded py-2 pr-4 pl-3 md:p-0 ${
-                  isActive("/kinsonsterrazzo/blog")
+                  isActive("/blog")
                     ? "text-primary-600 md:text-primary-600 dark:text-primary-500 md:dark:text-primary-500"
                     : "md:hover:text-primary-600 md:dark:hover:text-primary-500 text-gray-900 hover:bg-gray-100 md:hover:bg-transparent dark:text-white dark:hover:bg-gray-700 md:dark:hover:bg-transparent"
                 }`}
@@ -216,9 +216,9 @@ const Navbar = () => {
             </li> */}
             {/* <li>
               <Link
-                to="/kinsonsterrazzo/contact"
+                to="/contact"
                 className={`block rounded py-2 pr-4 pl-3 md:p-0 ${
-                  isActive("/kinsonsterrazzo/contact")
+                  isActive("/contact")
                     ? "text-primary-600 md:text-primary-600 dark:text-primary-500 md:dark:text-primary-500"
                     : "md:hover:text-primary-600 md:dark:hover:text-primary-500 text-gray-900 hover:bg-gray-100 md:hover:bg-transparent dark:text-white dark:hover:bg-gray-700 md:dark:hover:bg-transparent"
                 }`}

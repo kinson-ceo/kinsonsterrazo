@@ -61,8 +61,7 @@ const ProjectsSection = () => {
   }
 
   const path = location.pathname;
-  const isProjectsPage =
-    path === "/projects" || path === "/kinsonsterrazzo/projects";
+  const isProjectsPage = path === "/projects" || path === "/projects";
 
   return (
     <section className="bg-gray-50 py-24 dark:bg-gray-800">
@@ -130,7 +129,7 @@ const ProjectsSection = () => {
                 <Button
                   color="light"
                   className="group-hover:bg-primary-50 mt-6 w-full dark:group-hover:bg-gray-600"
-                  href={`/kinsonsterrazzo/projects/${project.slug}`}
+                  href={`/projects/${project.slug}`}
                 >
                   {getLocalizedContent(project, "button_text")}
                 </Button>
@@ -142,7 +141,7 @@ const ProjectsSection = () => {
         {!isProjectsPage && (
           <div className="mt-12 text-center">
             <a
-              href="/kinsonsterrazzo/projects"
+              href="/projects"
               className="text-primary-600 hover:text-primary-700 dark:text-primary-400 dark:hover:text-primary-300 inline-flex items-center font-medium"
             >
               <span>

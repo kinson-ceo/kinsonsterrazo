@@ -71,7 +71,7 @@ const About = () => {
           <div className="space-y-8">
             <div className="overflow-hidden rounded-lg shadow-lg">
               <img
-                src="/kinsonsterrazzo/images/about/company-history.svg"
+                src="/images/about/company-history.svg"
                 alt="Kinsons Terrazzo History Timeline"
                 className="h-full w-full object-contain"
               />
@@ -120,7 +120,7 @@ const About = () => {
                   <img
                     src={
                       member.profile_picture ||
-                      `/kinsonsterrazzo/images/team/team-member${member.id}.svg`
+                      `/images/team/team-member${member.id}.svg`
                     }
                     alt={member.full_name}
                     className="mx-auto h-64 w-64 object-contain"

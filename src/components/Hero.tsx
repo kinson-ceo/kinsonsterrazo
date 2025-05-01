@@ -33,7 +33,7 @@ const Hero = () => {
         <div
           className="absolute inset-0 bg-cover bg-center"
           //   style={{
-          //     backgroundImage: "url('/kinsonsterrazzo/images/hero/hero-bg.svg')",
+          //     backgroundImage: "url('/images/hero/hero-bg.svg')",
           //   }}
         />
       </div>
@@ -67,7 +67,7 @@ const Hero = () => {
             <div className="flex flex-wrap gap-4">
               <Button
                 as={Link}
-                to="/kinsonsterrazzo/contact"
+                to="/contact"
                 size="lg"
                 className="bg-primary-600 hover:bg-primary-700 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
               >
@@ -75,7 +75,7 @@ const Hero = () => {
               </Button>
               <Button
                 as={Link}
-                to="/kinsonsterrazzo/projects"
+                to="/projects"
                 size="lg"
                 color="light"
                 className="border-gray-200 hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700"
@@ -87,7 +87,7 @@ const Hero = () => {
           <div className="hidden md:block">
             <div className="relative h-[450px] w-[450px] overflow-hidden rounded-full border-8 border-gray-800 shadow-xl">
               <img
-                src="/kinsonsterrazzo/images/logo.svg"
+                src="/images/logo.svg"
                 alt="Kinsons Terrazzo Logo"
                 className="h-full w-full object-contain p-8"
               />

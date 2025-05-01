@@ -21,35 +21,17 @@ export default function App() {
         <Navbar />
         <Layout>
           <Routes>
-            <Route path="/kinsonsterrazzo" element={<Home />} />
-            <Route path="/kinsonsterrazzo/about" element={<About />} />
-            <Route
-              path="/kinsonsterrazzo/contact"
-              element={<ContactSection />}
-            />
-            <Route
-              path="/kinsonsterrazzo/services"
-              element={<ServicesSection />}
-            />
-            <Route
-              path="/kinsonsterrazzo/services/:slug"
-              element={<ServiceDetail />}
-            />
-            <Route
-              path="/kinsonsterrazzo/projects"
-              element={<ProjectsSection />}
-            />
-            <Route
-              path="/kinsonsterrazzo/projects/:slug"
-              element={<ProjectDetail />}
-            />
-            <Route
-              path="/kinsonsterrazzo/testimonials"
-              element={<TestimonialsSection />}
-            />
-            <Route path="/kinsonsterrazzo/faq" element={<FaqSection />} />
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<ContactSection />} />
+            <Route path="/services" element={<ServicesSection />} />
+            <Route path="/services/:slug" element={<ServiceDetail />} />
+            <Route path="/projects" element={<ProjectsSection />} />
+            <Route path="/projects/:slug" element={<ProjectDetail />} />
+            <Route path="/testimonials" element={<TestimonialsSection />} />
+            <Route path="/faq" element={<FaqSection />} />
 
-            {/* Also add routes without the /kinsonsterrazzo prefix for local development */}
+            {/* Also add routes without the / prefix for local development */}
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<ContactSection />} />

@@ -43,7 +43,7 @@ const TestimonialsSection = () => {
 
   const path = location.pathname;
   const isTestimonialsPage =
-    path === "/testimonials" || path === "/kinsonsterrazzo/testimonials";
+    path === "/testimonials" || path === "/testimonials";
 
   // Show loading state
   if (loading) {
@@ -151,7 +151,7 @@ const TestimonialsSection = () => {
                         <img
                           src={
                             testimonial?.image ||
-                            "/kinsonsterrazzo/images/testimonials/testimonial1.svg"
+                            "/images/testimonials/testimonial1.svg"
                           }
                           alt={getLocalizedContent(testimonial, "client_name")}
                           className="h-full w-full object-contain"
@@ -181,7 +181,7 @@ const TestimonialsSection = () => {
         {!isTestimonialsPage && (
           <div className="mt-12 text-center">
             <a
-              href="/kinsonsterrazzo/testimonials"
+              href="/testimonials"
               className="text-primary-600 hover:text-primary-700 dark:text-primary-400 dark:hover:text-primary-300 inline-flex items-center font-medium"
             >
               <span>

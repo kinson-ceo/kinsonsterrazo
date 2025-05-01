@@ -5,7 +5,8 @@ import { useAppStore } from "../store/store";
 import * as FaIcons from "react-icons/fa";
 
 const Footer = () => {
-  const { footerData, fetchFooterData, getLocalizedContent, navData } = useAppStore();
+  const { footerData, fetchFooterData, getLocalizedContent, navData } =
+    useAppStore();
 
   useEffect(() => {
     fetchFooterData();
@@ -22,13 +23,13 @@ const Footer = () => {
   }
 
   return (
-    <div className="bg-gray-50 dark:bg-gray-900 p-10">
+    <div className="bg-gray-50 p-10 dark:bg-gray-900">
       <div className="w-full">
         <div className="grid w-full justify-between sm:flex sm:justify-between md:flex md:grid-cols-1">
           <div className="mb-6 md:mb-0">
             <div className="flex items-center">
               <img
-                src="/kinsonsterrazzo/images/logo.svg"
+                src="/images/logo.svg"
                 className="mr-3 h-12 w-12"
                 alt="Kinsons Terrazzo Logo"
               />

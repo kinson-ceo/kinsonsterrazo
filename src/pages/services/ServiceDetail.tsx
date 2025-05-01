@@ -73,8 +73,7 @@ const ServiceDetail = () => {
               alt={getLocalizedContent(service, "title")}
               className="absolute inset-0 h-full w-full object-cover"
               onError={(e) => {
-                e.currentTarget.src =
-                  "/kinsonsterrazzo/images/services/custom.svg";
+                e.currentTarget.src = "/images/services/custom.svg";
               }}
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
