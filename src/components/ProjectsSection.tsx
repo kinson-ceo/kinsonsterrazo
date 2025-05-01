@@ -110,7 +110,7 @@ const ProjectsSection = () => {
             >
               <div className="relative h-64 w-full overflow-hidden">
                 <img
-                  src={project?.image || project?.featured_image}
+                  src={project?.image ?? project?.featured_image ?? undefined}
                   alt={getLocalizedContent(project, "title")}
                   className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
