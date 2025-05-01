@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { useAppStore } from "../../store/store";
 import { useTranslation } from "react-i18next";
-import { Button, Carousel } from "flowbite-react";
+import { Carousel } from "flowbite-react";
 
 const ProjectDetail = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -127,7 +127,7 @@ const ProjectDetail = () => {
             <h2 className="mb-4 text-2xl font-bold text-gray-900 dark:text-white">
               {projectDetail?.description_heading}
             </h2>
-            <div className="prose prose-lg dark:prose-invert max-w-none">
+            <div className="prose prose-lg dark:prose-invert max-w-none dark:text-gray-300">
               <p>{getLocalizedContent(projectDetail, "description")}</p>
             </div>
           </div>
@@ -157,7 +157,7 @@ const ProjectDetail = () => {
             <h2 className="mb-4 text-2xl font-bold text-gray-900 dark:text-white">
               {projectDetail?.challenge_heading || "The Challenge"}
             </h2>
-            <div className="prose prose-lg dark:prose-invert max-w-none">
+            <div className="prose prose-lg dark:prose-invert max-w-none dark:text-gray-300">
               <p>{projectDetail?.challenge}</p>
             </div>
           </div>
@@ -166,7 +166,7 @@ const ProjectDetail = () => {
             <h2 className="mb-4 text-2xl font-bold text-gray-900 dark:text-white">
               {projectDetail?.solution_heading || "Our Solution"}
             </h2>
-            <div className="prose prose-lg dark:prose-invert max-w-none">
+            <div className="prose prose-lg dark:prose-invert max-w-none dark:text-gray-300">
               <p>{projectDetail?.solution}</p>
             </div>
           </div>
@@ -177,7 +177,7 @@ const ProjectDetail = () => {
           <h2 className="mb-4 text-2xl font-bold text-gray-900 dark:text-white">
             {projectDetail?.result_heading || "The Result"}
           </h2>
-          <div className="prose prose-lg dark:prose-invert max-w-none">
+          <div className="prose prose-lg dark:prose-invert max-w-none dark:text-gray-300">
             <p>{projectDetail?.result}</p>
           </div>
         </div>
@@ -206,7 +206,7 @@ const ProjectDetail = () => {
                     {item.caption && (
                       <div className="absolute bottom-0 w-full bg-black/50 p-4">
                         <p className="text-center text-white">
-                          {getLocalizedContent(item, "caption")}
+                          {item?.caption}
                         </p>
                       </div>
                     )}
@@ -268,9 +268,29 @@ const ProjectDetail = () => {
             {projectDetail.cta_subheading ||
               "Let us bring the timeless beauty of terrazzo to your project."}
           </p>
-          <Button color="primary" size="lg" href="/contact">
-            {projectDetail?.cta_button_text || "Get in Touch"}
-          </Button>
+         
+          <div className="mt-3 text-center">
+            <a
+              href="/contact"
+              className="bg-primary-600 hover:bg-primary-700 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800 mt-4 inline-flex items-center rounded-lg px-5 py-2.5 text-center text-sm font-medium text-white focus:ring-4 focus:outline-none"
+            >
+              {projectDetail?.cta_button_text || "Contact Us"}
+              <svg
+                className="ml-2 h-4 w-4"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M14 5l7 7m0 0l-7 7m7-7H3"
+                />
+              </svg>
+            </a>
+          </div>
         </div>
       </div>
     </div>

@@ -12,7 +12,7 @@ const Navbar = () => {
   const { i18n } = useTranslation();
   const { setLanguage } = useAppStore();
 
-  const { fetchNavData, navData } = useAppStore();
+  const { fetchNavData, navData, hero } = useAppStore();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -52,7 +52,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed z-50 w-full transition-all duration-300 ${
+      className={`fixed z-50 w-full transition-all duration-300 bg-white dark:bg-gray-900 ${
         isScrolled
           ? "bg-white/90 shadow-md backdrop-blur-md dark:bg-gray-900/90"
           : "bg-transparent"
@@ -61,7 +61,7 @@ const Navbar = () => {
       <div className="mx-auto flex max-w-screen-xl flex-wrap items-center justify-between p-4">
         <Link to="/" className="flex items-center">
           <img
-            src="/images/logo.svg"
+            src={hero?.logo || "/images/logo.svg"}
             className="mr-3 h-12 w-12"
             alt="Kinsons Terrazzo Logo"
           />
@@ -75,7 +75,7 @@ const Navbar = () => {
           </div>
         </Link>
 
-        <div className="flex md:order-2">
+        <div className="flex items-center md:order-2">
           <DarkThemeToggle className="mr-2" />
 
           {/* Language Selector */}
@@ -95,6 +95,7 @@ const Navbar = () => {
                 }
               >
                 {langInfo.flag}
+                <p className="text-xs dark:text-white ml-2">{langInfo.name}</p>
               </Button>
             ))}
           </div>

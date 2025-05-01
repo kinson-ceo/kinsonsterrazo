@@ -160,7 +160,7 @@ const ProjectsSection = () => {
                   className="group-hover:bg-primary-50 mt-6 w-full dark:group-hover:bg-gray-600"
                   href={`/projects/${project.slug}`}
                 >
-                  {getLocalizedContent(project, "button_text")}
+                  {project?.button_text || "Get in Touch"}
                 </Button>
               </div>
             </div>
@@ -174,7 +174,7 @@ const ProjectsSection = () => {
               className="text-primary-600 hover:text-primary-700 dark:text-primary-400 dark:hover:text-primary-300 inline-flex items-center font-medium"
             >
               <span>
-                {getLocalizedContent(projectSection, "view_all_button")}
+                {projectSection?.view_all_button || "View All Projects"}
               </span>
               <svg
                 className="ml-1 h-5 w-5"

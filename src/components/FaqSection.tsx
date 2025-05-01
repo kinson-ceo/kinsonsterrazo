@@ -80,13 +80,13 @@ const FaqSection = () => {
 
         <div className="mt-12 text-center">
           <p className="text-lg text-gray-700 dark:text-gray-300">
-            {getLocalizedContent(faqs, "cta_text")}
+            {faqs?.cta_text || "Still have questions? We're here to help."}
           </p>
           <a
             href="/contact"
             className="bg-primary-600 hover:bg-primary-700 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800 mt-4 inline-flex items-center rounded-lg px-5 py-2.5 text-center text-sm font-medium text-white focus:ring-4 focus:outline-none"
           >
-            {getLocalizedContent(faqs, "cta_button_text")}
+            {faqs?.cta_button_text || "Contact Us"}
             <svg
               className="ml-2 h-4 w-4"
               fill="none"

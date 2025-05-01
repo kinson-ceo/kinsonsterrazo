@@ -8,8 +8,8 @@ import swTranslation from "./locales/sw.json";
 
 // Define the available languages
 export const languages = {
-  en: { name: "English", code: "en", flag: "🇺🇸" },
-  sw: { name: "Swahili", code: "sw", flag: "🇹🇿" },
+  en: { name: "English", code: "en", flag: "🇬🇧" },
+  sw: { name: "Swahili", code: "sw", flag: "🇰🇪" },
 };
 
 // Define all translation resources

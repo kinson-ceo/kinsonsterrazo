@@ -60,11 +60,11 @@ const BenefitsSection = () => {
           {benefits.benefits.map((benefit) => (
             <div key={benefit.id} className="flex gap-6">
               <div className="flex-shrink-0">
-                <div className="bg-primary-50 flex h-16 w-16 items-center justify-center rounded-full dark:bg-gray-800">
+                <div className="bg-primary-400 dark:bg-primary-400 flex h-16 w-16 items-center justify-center rounded-full dark:bg-gray-800">
                   <IconRenderer
                     iconName={benefit?.svg_icon}
                     size={32}
-                    className="text-primary-600 dark:text-primary-400"
+                    className="text-white dark:text-primary-200"
                   />
                 </div>
               </div>
