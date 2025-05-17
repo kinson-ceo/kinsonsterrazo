@@ -91,7 +91,7 @@ import Shimmer from "./Shimmer";
 
 const ServicesSection = () => {
   const { i18n } = useTranslation();
-  const { services, fetchServices, getLocalizedContent, loading, error } =
+  const { services, fetchServices, loading, error } =
     useAppStore();
 
   // Fetch services on component mount and when language changes
@@ -168,10 +168,11 @@ const ServicesSection = () => {
       <div className="container mx-auto px-4">
         <div className="mb-16 text-center">
           <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl dark:text-white">
-            {getLocalizedContent(services, "headline")}
+            {services?.headline || "Our Services"}
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-lg text-gray-600 dark:text-gray-300">
-            {getLocalizedContent(services, "subheading")}
+            {services?.subheading ||
+              "We offer a wide range of services to meet your needs. From flooring to countertops, we have you covered."}
           </p>
         </div>
 
@@ -186,11 +187,11 @@ const ServicesSection = () => {
                   {getServiceIcon(service.slug)}
                 </div> */}
                 <h3 className="text-xl font-bold text-gray-900 dark:text-white">
-                  {getLocalizedContent(service, "title")}
+                  {service?.title || "Service"}
                 </h3>
                 <div className="relative mb-4 h-48 w-full overflow-hidden rounded-lg">
                   <img
-                    alt={getLocalizedContent(service, "title")}
+                    alt={service?.title || "Service"}
                     src={service?.featured_image}
                     className="h-full w-full object-contain p-2 transition-transform duration-500 group-hover:scale-105"
                     onError={(e) => {
@@ -200,7 +201,7 @@ const ServicesSection = () => {
                   />
                 </div>
                 <p className="mb-4 text-gray-600 dark:text-gray-300">
-                  {getLocalizedContent(service, "subtitle")}
+                  {service?.subtitle || "Service subtitle"}
                 </p>
                 <Link to={`/services/${service.slug}`}>
                   <Button
@@ -208,7 +209,7 @@ const ServicesSection = () => {
                     className="group text-primary-600 hover:text-primary-700 dark:text-primary-400 dark:hover:text-primary-300 mt-auto inline-flex items-center"
                     pill
                   >
-                    <span>Learn More</span>
+                    <span>{service?.button_text || "Learn More"}</span>
                     <svg
                       className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1"
                       fill="none"

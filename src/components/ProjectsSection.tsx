@@ -3,6 +3,7 @@ import { Button } from "flowbite-react";
 import { useAppStore } from "../store/store";
 import { useTranslation } from "react-i18next";
 import Shimmer from "./Shimmer";
+import { Link } from "react-router-dom";
 
 const ProjectsSection = () => {
   const [activeCategory, setActiveCategory] = useState("all");
@@ -155,13 +156,14 @@ const ProjectsSection = () => {
                 <p className="mb-4 text-gray-600 dark:text-gray-300">
                   {getLocalizedContent(project, "description")}
                 </p>
-                <Button
-                  color="light"
-                  className="group-hover:bg-primary-50 mt-6 w-full dark:group-hover:bg-gray-600"
-                  href={`/projects/${project.slug}`}
-                >
-                  {project?.button_text || "Get in Touch"}
-                </Button>
+                <Link to={`/projects/${project?.slug}`}>
+                  <Button
+                    color="light"
+                    className="group-hover:bg-primary-50 mt-6 w-full dark:group-hover:bg-gray-600"
+                  >
+                    {project?.button_text || "View Project"}
+                  </Button>
+                </Link>
               </div>
             </div>
           ))}

@@ -448,6 +448,7 @@ interface ServiceSummary {
   subtitle_sw?: string;
   featured_image: string;
   active: boolean;
+  button_text: string;
 }
 
 interface FooterLink {
