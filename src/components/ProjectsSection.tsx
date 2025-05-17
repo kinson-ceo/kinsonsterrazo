@@ -16,7 +16,6 @@ const ProjectsSection = () => {
     fetchProjects,
     loading,
     error,
-    getLocalizedContent,
   } = useAppStore();
   const { i18n } = useTranslation();
 
@@ -99,12 +98,12 @@ const ProjectsSection = () => {
         <div className="mb-16 text-center">
           <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl dark:text-white">
             {projectSection
-              ? getLocalizedContent(projectSection, "headline")
+              ? projectSection?.headline
               : "Our Terrazzo Projects"}
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-lg text-gray-600 dark:text-gray-300">
             {projectSection
-              ? getLocalizedContent(projectSection, "subheading")
+              ? projectSection?.subheading
               : "Browse our portfolio of stunning terrazzo installations. Each project showcases our commitment to quality and artistic excellence."}
           </p>
         </div>
@@ -126,7 +125,7 @@ const ProjectsSection = () => {
               pill
               className="min-w-28"
             >
-              {getLocalizedContent(category, "name")}
+              {category?.name}
             </Button>
           ))}
         </div>
@@ -140,21 +139,21 @@ const ProjectsSection = () => {
               <div className="relative h-64 w-full overflow-hidden">
                 <img
                   src={project?.image ?? project?.featured_image ?? undefined}
-                  alt={getLocalizedContent(project, "title")}
+                  alt={project?.title}
                   className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
                 <div className="bg-primary-600 absolute top-0 right-0 m-2 rounded-full px-3 py-1 text-xs font-semibold text-white uppercase">
                   {project.categories[0]
-                    ? getLocalizedContent(project.categories[0], "name")
+                    ? project.categories[0]?.name
                     : "Project"}
                 </div>
               </div>
               <div className="p-6">
                 <h3 className="mb-2 text-xl font-bold text-gray-900 dark:text-white">
-                  {getLocalizedContent(project, "title")}
+                  {project?.title}
                 </h3>
                 <p className="mb-4 text-gray-600 dark:text-gray-300">
-                  {getLocalizedContent(project, "description")}
+                  {project?.description}
                 </p>
                 <Link to={`/projects/${project?.slug}`}>
                   <Button
@@ -171,8 +170,8 @@ const ProjectsSection = () => {
 
         {!isProjectsPage && (
           <div className="mt-12 text-center">
-            <a
-              href="/projects"
+            <Link
+              to="/projects"
               className="text-primary-600 hover:text-primary-700 dark:text-primary-400 dark:hover:text-primary-300 inline-flex items-center font-medium"
             >
               <span>
@@ -190,7 +189,7 @@ const ProjectsSection = () => {
                   clipRule="evenodd"
                 />
               </svg>
-            </a>
+            </Link>
           </div>
         )}
       </div>

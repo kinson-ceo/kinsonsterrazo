@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { useAppStore } from "../../store/store";
 import { useTranslation } from "react-i18next";
 import { Carousel } from "flowbite-react";
@@ -10,7 +10,6 @@ const ProjectDetail = () => {
   const {
     projectDetail,
     fetchProjectDetail,
-    getLocalizedContent,
     loading,
     error,
   } = useAppStore();
@@ -111,7 +110,7 @@ const ProjectDetail = () => {
           <div className="mb-12 overflow-hidden rounded-lg shadow-lg">
             <img
               src={projectDetail.featured_image}
-              alt={getLocalizedContent(projectDetail, "title")}
+              alt={projectDetail?.title}
               className="h-auto w-full object-cover"
               onError={(e) => {
                 // Fallback image if the real image doesn't load
@@ -128,7 +127,7 @@ const ProjectDetail = () => {
               {projectDetail?.description_heading}
             </h2>
             <div className="prose prose-lg dark:prose-invert max-w-none dark:text-gray-300">
-              <p>{getLocalizedContent(projectDetail, "description")}</p>
+              <p>{projectDetail?.description}</p>
             </div>
           </div>
 
@@ -199,7 +198,7 @@ const ProjectDetail = () => {
                     <img
                       src={item.image}
                       alt={
-                        getLocalizedContent(item, "caption") || "Project image"
+                        item?.caption || "Project image"
                       }
                       className="h-full w-full object-cover"
                     />
@@ -270,8 +269,8 @@ const ProjectDetail = () => {
           </p>
          
           <div className="mt-3 text-center">
-            <a
-              href="/contact"
+            <Link
+              to="/contact"
               className="bg-primary-600 hover:bg-primary-700 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800 mt-4 inline-flex items-center rounded-lg px-5 py-2.5 text-center text-sm font-medium text-white focus:ring-4 focus:outline-none"
             >
               {projectDetail?.cta_button_text || "Contact Us"}
@@ -289,7 +288,7 @@ const ProjectDetail = () => {
                   d="M14 5l7 7m0 0l-7 7m7-7H3"
                 />
               </svg>
-            </a>
+            </Link>
           </div>
         </div>
       </div>

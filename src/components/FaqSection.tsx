@@ -7,6 +7,7 @@ import {
 } from "flowbite-react";
 import { useAppStore } from "../store/store";
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 
 const FaqSection = () => {
   const { i18n } = useTranslation();
@@ -54,10 +55,10 @@ const FaqSection = () => {
       <div className="container mx-auto px-4">
         <div className="mb-16 text-center">
           <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl dark:text-white">
-            {getLocalizedContent(faqs, "headline")}
+            {faqs?.headline || "Frequently Asked Questions"}
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-lg text-gray-600 dark:text-gray-300">
-            {getLocalizedContent(faqs, "subheading")}
+            {faqs?.subheading || "Find answers to common questions about our services."}
           </p>
         </div>
 
@@ -82,8 +83,8 @@ const FaqSection = () => {
           <p className="text-lg text-gray-700 dark:text-gray-300">
             {faqs?.cta_text || "Still have questions? We're here to help."}
           </p>
-          <a
-            href="/contact"
+          <Link
+            to="/contact"
             className="bg-primary-600 hover:bg-primary-700 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800 mt-4 inline-flex items-center rounded-lg px-5 py-2.5 text-center text-sm font-medium text-white focus:ring-4 focus:outline-none"
           >
             {faqs?.cta_button_text || "Contact Us"}
@@ -101,7 +102,7 @@ const FaqSection = () => {
                 d="M14 5l7 7m0 0l-7 7m7-7H3"
               />
             </svg>
-          </a>
+          </Link>
         </div>
       </div>
     </section>

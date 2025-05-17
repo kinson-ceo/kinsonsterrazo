@@ -5,7 +5,7 @@ import { useAppStore } from "../store/store";
 import * as FaIcons from "react-icons/fa";
 
 const Footer = () => {
-  const { footerData, fetchFooterData, getLocalizedContent, navData } =
+  const { footerData, fetchFooterData, navData } =
     useAppStore();
 
   useEffect(() => {
@@ -43,20 +43,20 @@ const Footer = () => {
               </div>
             </div>
             <p className="mt-4 max-w-lg text-gray-600 dark:text-gray-400">
-              {getLocalizedContent(footerData.footer, "note")}
+              {footerData?.footer?.note}
             </p>
           </div>
           <div className="grid grid-cols-2 gap-8 sm:mt-4 sm:grid-cols-3 sm:gap-6">
             {footerData.footer_link_sections.map((section) => (
               <div key={section.id}>
                 <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
-                  {getLocalizedContent(section, "title")}
+                  {section?.title}
                 </h2>
                 <ul className="text-gray-600 dark:text-gray-400">
                   {section.links.map((link) => (
                     <li key={link.id} className="mb-4">
                       <Link to={link.url} className="hover:underline">
-                        {getLocalizedContent(link, "text")}
+                        {link?.text}
                       </Link>
                     </li>
                   ))}
@@ -70,13 +70,13 @@ const Footer = () => {
           <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">
             © {new Date().getFullYear()}{" "}
             <Link to="/" className="hover:underline">
-              Kinsons Terrazzo™
+            {navData?.nav?.company_name}™
             </Link>
             . All Rights Reserved.
           </span>
           <div className="mt-4 flex space-x-6 sm:mt-0 sm:justify-center">
             {footerData.social_media_links.map((social) => {
-              const IconComponent = getIconComponent(social.icon);
+              const IconComponent = getIconComponent(social?.icon);
               return IconComponent ? (
                 <a
                   key={social.id}

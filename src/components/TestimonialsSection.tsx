@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { Card, Carousel } from "flowbite-react";
 import { useAppStore } from "../store/store";
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import Shimmer from "./Shimmer";
 
@@ -211,12 +211,12 @@ const TestimonialsSection = () => {
 
         {!isTestimonialsPage && (
           <div className="mt-12 text-center">
-            <a
-              href="/testimonials"
+            <Link
+              to="/testimonials"
               className="text-primary-600 hover:text-primary-700 dark:text-primary-400 dark:hover:text-primary-300 inline-flex items-center font-medium"
             >
               <span>
-                {getLocalizedContent(testimonialsSection, "read_more")}
+                {testimonialsSection?.read_more || "Read More"}
               </span>
               <svg
                 className="ml-1 h-5 w-5"
@@ -230,7 +230,7 @@ const TestimonialsSection = () => {
                   clipRule="evenodd"
                 />
               </svg>
-            </a>
+            </Link>
           </div>
         )}
       </div>
