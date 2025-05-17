@@ -133,7 +133,7 @@ const ProjectsSection = () => {
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {filteredProjects.map((project) => (
             <div
-              key={project.id}
+              key={project?.id}
               className="group overflow-hidden rounded-lg bg-white shadow-md transition-all duration-300 hover:shadow-xl dark:bg-gray-700"
             >
               <div className="relative h-64 w-full overflow-hidden">

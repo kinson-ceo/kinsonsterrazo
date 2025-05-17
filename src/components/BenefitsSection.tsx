@@ -5,8 +5,7 @@ import IconRenderer from "./IconRenderer";
 
 const BenefitsSection = () => {
   // const { i18n } = useTranslation();
-  const { benefits, fetchBenefits, getLocalizedContent, loading, error } =
-    useAppStore();
+  const { benefits, fetchBenefits, loading, error } = useAppStore();
 
   // Fetch benefits on component mount and when language changes
   useEffect(() => {
@@ -49,15 +48,15 @@ const BenefitsSection = () => {
       <div className="container mx-auto px-4">
         <div className="mb-16 text-center">
           <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl dark:text-white">
-            {getLocalizedContent(benefits, "headline")}
+            {benefits?.headline}
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-lg text-gray-600 dark:text-gray-300">
-            {getLocalizedContent(benefits, "subheading")}
+            {benefits?.subheading}
           </p>
         </div>
 
         <div className="grid gap-12 md:grid-cols-2">
-          {benefits.benefits.map((benefit) => (
+          {benefits?.benefits?.map((benefit) => (
             <div key={benefit.id} className="flex gap-6">
               <div className="flex-shrink-0">
                 <div className="bg-primary-400 dark:bg-primary-400 flex h-16 w-16 items-center justify-center rounded-full dark:bg-gray-800">
@@ -70,10 +69,10 @@ const BenefitsSection = () => {
               </div>
               <div>
                 <h3 className="mb-2 text-xl font-bold text-gray-900 dark:text-white">
-                  {getLocalizedContent(benefit, "title")}
+                  {benefit?.title}
                 </h3>
                 <p className="text-gray-600 dark:text-gray-300">
-                  {getLocalizedContent(benefit, "description")}
+                  {benefit?.description}
                 </p>
               </div>
             </div>
@@ -84,16 +83,16 @@ const BenefitsSection = () => {
           <div className="flex flex-col items-center gap-6 md:flex-row">
             <div className="md:w-2/3">
               <h3 className="mb-4 text-2xl font-bold text-gray-900 dark:text-white">
-                {getLocalizedContent(benefits, "headline2")}
+                {benefits?.headline2}
               </h3>
               <p className="text-lg text-gray-700 dark:text-gray-300">
-                {getLocalizedContent(benefits, "description")}
+                {benefits?.description}
               </p>
             </div>
             <div className="flex-1">
               <div className="flex justify-center">
                 <img
-                  src="/images/terrazzo-craft.svg"
+                  src={benefits?.image}
                   alt="Terrazzo Craftsmanship"
                   className="h-64 w-auto rounded-lg object-cover shadow-lg"
                 />

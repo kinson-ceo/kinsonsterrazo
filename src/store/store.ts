@@ -211,6 +211,7 @@ interface BenefitsSection {
   benefits: Benefit[];
   created_at: string;
   updated_at: string;
+  image: string;
 }
 
 interface Faq {
